@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Budha Calendar</title>
+    <link rel="stylesheet" href="css/plugins.css"/>
+    <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
+
+    <link rel="stylesheet" href="css/app.css"/>
+
+    <script src="http://maps.google.com/maps/api/js"></script>
+    <script src="lib/onsen/js/angular/angular.js"></script>
+    <script src="lib/onsen/js/angular/angular-touch.js"></script>
+    <script src="lib/onsen/js/onsenui.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="i18n/ru-ru.js"></script>
+    <script src="i18n/en-us.js"></script>
+    <script src="i18n/mn-cyrl.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/templator.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body ng-controller="appController">
+
+<ons-navigator animation="slide" var="app.navi">
+    <ons-page ng-controller="mainController">
+        <ons-toolbar modifier="opacity">
+            <div class="left">
+                <ons-toolbar-button ng-click="app.navi.pushPage('year.html')">{{i18n.title}}</ons-toolbar-button>
+            </div>
+            <div class="center">{{i18n.today}}</div>
+            <div class="right">
+                <ons-toolbar-button ng-click="app.navi.pushPage('info.html')"><i class="icon icon-info"></i></ons-toolbar-button>
+                <ons-toolbar-button ng-click="app.navi.pushPage('settings.html')"><i class="icon icon-settings"></i></ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <ons-carousel var="app.carousel" swipeable direction="horizontal" auto-scroll style="height:100%"></ons-carousel>
+        <ons-template id="carouselItem.html">
+            <ons-carousel-item id="item{{id}}">
+                <div class="app-page main-page">
+                    <div class="main green">
+                        <div class="main-top">
+                            <div class="year">{{year}}</div>
+                            <div class="day">
+                                <i class="icon icon-moon"></i>
+                                <div class="weekday">{{weekday}}</div>
+                                <div class="moon">{{moonday}}</div>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <span class="number">{{date}}</span>
+                            {{month}}
+                        </div>
+                        <div class="icons icons-{{symcount}}">
+                            <ul></ul>
+                        </div>
+                    </div>
+                    <ons-scroller class="description">
+                        <div class="description-content">
+                            {{description}}
+                        </div>
+                    </ons-scroller>
+                </div>
+            </ons-carousel-item>
+        </ons-template>
+
+        <ons-bottom-toolbar>
+        </ons-bottom-toolbar>
+    </ons-page>
+</ons-navigator>
+
+<ons-template id="popover.html">
+    <ons-popover var="app.popover" animation="fade" direction="up" cancelable>
+        <p class="symbol-hint"></p>
+    </ons-popover>
+</ons-template>
+
+</body>
+</html>

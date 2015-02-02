@@ -1,0 +1,16 @@
+<ons-page ng-controller="yearController">
+    <ons-toolbar modifier="opacity">
+        <div class="left">
+            <ons-toolbar-button ng-click="app.navi.popPage()">Сегодня</ons-toolbar-button>
+        </div>
+        <div class="center">{{year}}</div>
+        <div class="right">
+            <ons-toolbar-button ng-click="app.navi.pushPage('info.html')"><i class="icon icon-info"></i></ons-toolbar-button>
+            <ons-toolbar-button ng-click="app.navi.pushPage('settings.html')"><i class="icon icon-settings"></i></ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+
+    <div class="app-page">
+
+    </div>
+</ons-page>

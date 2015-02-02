@@ -1,0 +1,195 @@
+.navigation-bar {
+  background: #7cb03e;
+  color: #fff;
+  border: none;
+}
+.inline-block {
+  display: inline-block;
+}
+.icon {
+  margin-top: 10px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background: url(../img/face-icons.png) no-repeat;
+}
+.icon-info {
+  background-position: 0 0;
+}
+.icon-settings {
+  background-position: 0 -24px;
+}
+.icon-moon {
+  width: 18px;
+  margin-top: 0;
+  background-position: 0 -48px;
+}
+/* Pages */
+.app-page.main-page {
+  height: 100%;
+}
+.app-page.main-page .green {
+  background: url(../img/bg-tile.jpg) 0 0 repeat;
+  border-bottom: 0.2em solid #609126;
+}
+.app-page.main-page .main {
+  height: 50%;
+  color: #fff;
+}
+.app-page.main-page .main .main-top {
+  padding: 1em 0;
+  margin: 0 1em;
+}
+.app-page.main-page .main .main-top .year {
+  float: left;
+  margin: 0 0 0 30%;
+  font-weight: bold;
+  text-align: center;
+  width: 40%;
+}
+.app-page.main-page .main .main-top .day {
+  float: right;
+  margin: 0;
+  width: 30%;
+  text-align: right;
+}
+.app-page.main-page .main .main-top .day .moon {
+  float: right;
+  display: inline-block;
+  padding: 2px 7px 0 0;
+}
+.app-page.main-page .main .main-top .day .weekday {
+  float: right;
+  display: inline-block;
+  padding: 2px;
+  background: #fff;
+  color: #7cb03e;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.app-page.main-page .main .main-top:after {
+  clear: both;
+  display: table-cell;
+  content: ' ';
+}
+.app-page.main-page .main .date {
+  padding: 0 .5em;
+  font-size: 38px;
+  text-align: center;
+}
+.app-page.main-page .main .date .number {
+  padding: 0;
+  line-height: 60px;
+  font-size: 90px;
+  font-weight: bold;
+}
+.app-page.main-page .main .icons {
+  margin: 0 auto;
+  text-align: center;
+}
+.app-page.main-page .main .icons.icons-1 {
+  width: 43px;
+}
+.app-page.main-page .main .icons.icons-2 {
+  width: 96px;
+}
+.app-page.main-page .main .icons.icons-3 {
+  width: 149px;
+}
+.app-page.main-page .main .icons.icons-4 {
+  width: 202px;
+}
+.app-page.main-page .main .icons.icons-5 {
+  width: 255px;
+}
+.app-page.main-page .main .icons ul {
+  list-style-type: none;
+  margin: 0;
+  padding: .5em 0;
+}
+.app-page.main-page .main .icons ul li {
+  display: inline-block;
+  float: left;
+  margin-left: 10px;
+  width: 43px;
+  height: 43px;
+  border-bottom: 0.2em solid #609126;
+  background-color: #fff;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 80%;
+}
+.app-page.main-page .main .icons ul li:first-child {
+  margin-left: 0;
+}
+.app-page.main-page .main .icons ul li.baljinima {
+  background-image: url(../img/icon-baljinima.png);
+}
+.app-page.main-page .main .icons ul li.black {
+  background-image: url(../img/icon-black.png);
+}
+.app-page.main-page .main .icons ul li.buddha {
+  background-color: #fff2d8;
+  background-image: url(../img/icon-buddha.png);
+}
+.app-page.main-page .main .icons ul li.dashinima {
+  background-image: url(../img/icon-dashinima.png);
+}
+.app-page.main-page .main .icons ul li.empty {
+  background-image: url(../img/icon-empty.png);
+}
+.app-page.main-page .main .icons ul li.fate {
+  background-image: url(../img/icon-fate.png);
+}
+.app-page.main-page .main .icons ul li.fly {
+  background-image: url(../img/icon-fly.png);
+}
+.app-page.main-page .main .icons ul li.great {
+  background-image: url(../img/icon-great.png);
+}
+.app-page.main-page .main .icons ul li.jubilee {
+  background-image: url(../img/icon-jubilee.png);
+}
+.app-page.main-page .main .icons ul li.lustanaga {
+  background-image: url(../img/icon-lustanaga.png);
+}
+.app-page.main-page .main .icons ul li.pill {
+  background-image: url(../img/icon-pill.png);
+}
+.app-page.main-page .main .icons ul li.scissors {
+  background-image: url(../img/icon-scissors.png);
+}
+.app-page.main-page .description {
+  height: 50%;
+  background: #f9fafb;
+}
+.app-page.main-page .description .description-content {
+  padding: 1em;
+  font-size: 14px;
+}
+.app-page.info-page {
+  padding: 12px 8px;
+}
+.app-page.info-page p {
+  margin: 0 0 18px;
+}
+.popover-mask {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.popover__content {
+  background-color: #598821;
+}
+.popover__bottom-arrow,
+.popover__top-arrow,
+.popover__left-arrow,
+.popover__right-arrow {
+  background-image: -webkit-linear-gradient(45deg, #598821, #598821 50%, transparent 50%);
+  background-image: -moz-linear-gradient(45deg, #598821, #598821 50%, transparent 50%);
+  background-image: -o-linear-gradient(45deg, #598821, #598821 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #598821, #598821 50%, transparent 50%);
+}
+.symbol-hint {
+  color: #fff;
+  padding: 0 20px;
+  text-align: center;
+}

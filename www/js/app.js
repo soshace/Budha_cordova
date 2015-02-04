@@ -168,34 +168,43 @@
 
                     setPostChange = function () {
                         app.carousel.on('postchange', function (e) {
+                            console.log('---------------------------------');
                             console.log('setPostChange');
                             console.log('itemFirst ' + itemFirst + ' itemLast ' + itemLast);
-                            console.log('currentIndex ' + itemCurrent);
+                            console.log('itemCurrent ' + itemCurrent);
                             console.log(e.lastActiveIndex);
                             console.log(e.activeIndex);
 
 
                             var dir = e.activeIndex - e.lastActiveIndex;
+                            var takeAction = false;
                             if (!dir) return;
                             if (dir > 0) {
                                 itemCurrent++;
                                 console.log('dir > 0');
-                                //if (itemLast - itemCurrent < 3) {
+                                if (itemLast - itemCurrent < 3) {
                                     appendDay(++itemLast);
-                                //}
+                                    //removeDay(itemFirst);
+                                    takeAction = true;
+                                }
                             }
                             else {
                                 itemCurrent--;
                                 console.log('dir < 0');
-                                //if (itemCurrent - itemFirst < 3) {
+                                if (itemCurrent - itemFirst < 3) {
                                     appendDay(--itemFirst, true);
-                                //}
+                                    //removeDay(itemLast);
+                                    takeAction = true;
+                                }
                             }
 
-                            setImmediate(function () {
+                            takeAction && setImmediate(function () {
+                                console.log('action taken');
                                 app.carousel.refresh();
                                 if (dir < 0){
                                     app.carousel.setActiveCarouselItemIndex(app.carousel.getActiveCarouselItemIndex()+1, {animation: 'none'});
+                                    itemLast--;
+                                    itemCurrent--;
                                 } else {
                                     app.carousel.setActiveCarouselItemIndex(app.carousel.getActiveCarouselItemIndex(), {animation: 'none'});
                                 }
@@ -203,7 +212,6 @@
                             });
                         });
                         // TODO: removeDay
-                        // TODO: addDay only on close currentItem
 
                     };
 

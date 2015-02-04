@@ -6424,7 +6424,7 @@ limitations under the License.
         this._scroll = Math.max(0, Math.min(max, scroll));
         this._scrollTo(this._scroll, {animate: options.animation !== 'none', callback: options.callback});
 
-        this._tryFirePostChangeEvent();
+        //this._tryFirePostChangeEvent();
       },
 
       /**

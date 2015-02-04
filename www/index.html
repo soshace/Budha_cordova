@@ -40,7 +40,7 @@
             </div>
         </ons-toolbar>
 
-        <ons-carousel var="app.carousel" swipeable direction="horizontal" auto-scroll style="height:100%"></ons-carousel>
+        <ons-carousel id="carousel" var="app.carousel" swipeable direction="horizontal" auto-scroll style="height:100%"></ons-carousel>
         <ons-template id="carouselItem.html">
             <ons-carousel-item id="item{{id}}">
                 <div class="app-page main-page">
@@ -61,10 +61,10 @@
                             <ul></ul>
                         </div>
                     </div>
-                    <ons-scroller class="description">
-                        <div class="description-content">
+                        <div class="description-content content-padded">
                             {{description}}
                         </div>
+                    <ons-scroller class="description">
                     </ons-scroller>
                 </div>
             </ons-carousel-item>

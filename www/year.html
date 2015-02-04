@@ -10,7 +10,18 @@
         </div>
     </ons-toolbar>
 
-    <div class="app-page">
+    <div class="app-page main-page">
+        <div class="green" style="height: 100%;">
+            <ons-list ng-repeat="year in years">
+                <ons-list-item>
+                    <ons-toolbar><div class="center">{{year}}</div></ons-toolbar>
 
+                </ons-list-item>
+                <ons-list-item ng-repeat="month in months" modifier="tappable" class="green">
+                    <div class="month-item">{{month}}</div>
+                </ons-list-item>
+            </ons-list>
+
+        </div>
     </div>
 </ons-page>

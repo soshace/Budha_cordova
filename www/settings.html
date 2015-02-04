@@ -6,16 +6,26 @@
         <div class="center">Настройки</div>
     </ons-toolbar>
 
-    <div class="app-page">
-        <ons-list>
-            <ons-list-item modifier="chevron">
-                Язык
-                <span class="list-item-note lucent">Русский</span>
-            </ons-list-item>
-        </ons-list>
-
-        <div class="main green" style="height: 100%;">
-
+    <div class="app-page main-page">
+        <div class="green" style="height: 100%;">
+            <ons-list>
+                <ons-list-item modifier="chevron" ng-click="app.navi.pushPage('lang.html', { animation : 'slide' })">
+                    Язык
+                    <span class="list-item-note lucent">{{currentLanguage}}</span>
+                </ons-list-item>
+            </ons-list>
+            <div class="content-padded">
+                <ons-button modifier="large"
+                            onclick="">
+                    Купить
+                </ons-button>
+            </div>
+            <div class="content-padded">
+                <ons-button modifier="large"
+                            onclick="">
+                    Восстановить
+                </ons-button>
+            </div>
         </div>
     </div>
 </ons-page>

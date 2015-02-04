@@ -226,12 +226,12 @@
                 }
                 $scope.$on('lang-change', function () {
                     console.log('lang-change');
-                    console.log(today);
-                    setImmediate(function () {
-                        app.carousel.setActiveCarouselItemIndex(itemLast - itemCurrent);
-                    });
 
-                    //setCurrentDate(today);
+                    appScope.i18n = I18n.pick();
+                    lang = I18n.getLanguage();
+                    app.carousel._element.empty();
+                    setCurrentDate(today);
+                    app.carousel.refresh();
 
                 });
 
@@ -259,15 +259,9 @@
                 I18n.setLanguage(langs[index]);
                 localStorage.setItem('lang', langs[index]);
 
-                appScope.i18n = I18n.pick();
-                //$scope.i18n = I18n.pick();
-
                 app.navi.popPage();
                 $rootScope.$broadcast('lang-change');
-                //app.carousel.refresh();
-                //app.carousel.setActiveCarouselItemIndex(app.carousel.getActiveCarouselItemIndex() + 7);
-                //window.location.reload();
-                //app.carousel.setActiveCarouselItemIndex(itemLast, {animation: 'none'});
+
             };
 
         }]);

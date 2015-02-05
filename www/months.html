@@ -14,14 +14,8 @@
 
     <div class="app-page main-page">
         <div style="height: 100%;">
-            <ons-list ng-repeat="year in years" class="year-list" style="border: none;">
-                <ons-list-item class="year-item">
-                    <div class="center">{{year}}</div>
-                </ons-list-item>
-                <ons-list-item ng-repeat="month in months" modifier="tappable" class="green"
-                               ng-click="selectMonth($index, year)">
-                    <div class="month-item">{{month | uppercase}}</div>
-                </ons-list-item>
+            <ons-list class="year-list" style="border: none;">
+
             </ons-list>
 
         </div>

@@ -198,3 +198,25 @@
   width: 90%;
   background: white;
 }
+/* Years */
+.year-list ons-list-item {
+  border: none !important;
+}
+.year-list .year-item {
+  border-top: 1px solid green !important;
+  border-bottom: 1px solid green !important;
+  color: white;
+  background-color: #7cb03e;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+}
+.year-list .month-item {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-bottom: 1px solid green !important;
+}
+.year-list ons-list-item:last-child .month-item {
+  border-bottom: none !important;
+}

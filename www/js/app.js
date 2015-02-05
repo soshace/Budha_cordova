@@ -207,9 +207,6 @@
 
                             });
                         });
-                        // TODO: removeDay or closeDay
-
-
                     };
 
                 if (days) {
@@ -243,8 +240,13 @@
             }])
 
         .controller('yearController', ['$scope', '$http', '$rootScope', '$sce', function ($scope, $rootScope, $sce) {
-            $scope.years = [2014, 2015, 2016];
+            $scope.years = [2014, 2015];
             $scope.months = I18n.pick('month');
+
+            $scope.selectMonth = function(index, year) {
+                alert(index + ' hoorray ' + year);
+                app.navi.pushPage('months.html');
+            }
         }])
 
         .controller('infoController', ['$scope', '$rootScope', '$sce', function ($scope, $rootScope, $sce) {

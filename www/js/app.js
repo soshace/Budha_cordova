@@ -91,15 +91,14 @@
                                 popovers: []
                             };
 
-                        if (prepend){
-                            console.log('prepend day');
+                        if (prepend) {
+                            console.log('prepend day ' + id);
                             app.carousel._element.prepend(html);
                         }
-                        else{
-                            console.log('append day');
+                        else {
+                            console.log('append day ' + id);
                             app.carousel._element.append(html);
                         }
-                        //console.log(html);
 
                         mask.forEach(function (i) {
                             var $ul = $('#item' + id + ' .icons ul');
@@ -115,11 +114,6 @@
                         });
 
                         items[id] = item;
-                        //ons.compile(document.getElementById(''+id));
-                        //var elem = document.getElementById('item'+id);
-                        //elem.style.position = 'absolute';
-                        //elem.style.left = parseInt(elem.previousElementSibling.style.left)+100+'%';
-                        //
 
                         return true;
                     },
@@ -130,6 +124,8 @@
 
                         var id = day.date.split('-').join(''),
                             item = items[id];
+
+                        console.log('removing day ' + id);
 
                         if (!item) return;
 
@@ -142,7 +138,6 @@
                     },
 
                     setCurrentDay = function (index) {
-                        //app.carousel._element.empty();
                         console.log('setCurrentDay');
                         var i = itemFirst = index - 2;
                         itemLast = index + 2;
@@ -167,6 +162,8 @@
                     },
 
                     setPostChange = function () {
+                        var allowRight = true;
+                        var allowLeft = true;
                         app.carousel.on('postchange', function (e) {
                             console.log('---------------------------------');
                             console.log('setPostChange');
@@ -175,43 +172,43 @@
                             console.log(e.lastActiveIndex);
                             console.log(e.activeIndex);
 
-
                             var dir = e.activeIndex - e.lastActiveIndex;
-                            var takeAction = false;
+
                             if (!dir) return;
+
                             if (dir > 0) {
-                                itemCurrent++;
-                                console.log('dir > 0');
-                                if (itemLast - itemCurrent < 3) {
+                                if (allowRight) {
+                                    itemCurrent++;
                                     appendDay(++itemLast);
-                                    //removeDay(itemFirst);
-                                    takeAction = true;
+                                    removeDay(itemFirst++);
+                                    allowLeft = false;
                                 }
-                            }
-                            else {
-                                itemCurrent--;
-                                console.log('dir < 0');
-                                if (itemCurrent - itemFirst < 3) {
+                                allowRight = true;
+                            } else {
+                                if (allowLeft) {
+                                    itemCurrent--;
                                     appendDay(--itemFirst, true);
-                                    //removeDay(itemLast);
-                                    takeAction = true;
+                                    removeDay(itemLast--);
+                                    allowRight = false;
                                 }
+                                allowLeft = true;
                             }
 
-                            takeAction && setImmediate(function () {
+                            setImmediate(function () {
                                 console.log('action taken');
                                 app.carousel.refresh();
-                                if (dir < 0){
-                                    app.carousel.setActiveCarouselItemIndex(app.carousel.getActiveCarouselItemIndex()+1, {animation: 'none'});
-                                    itemLast--;
-                                    itemCurrent--;
+                                if (dir < 0) {
+                                    !allowRight && app.carousel.setActiveCarouselItemIndex(app.carousel.getActiveCarouselItemIndex()+1, {animation: 'none'});
+                                    //itemLast--;
+                                    //itemCurrent--;
                                 } else {
-                                    app.carousel.setActiveCarouselItemIndex(app.carousel.getActiveCarouselItemIndex(), {animation: 'none'});
+                                    !allowLeft && app.carousel.setActiveCarouselItemIndex(app.carousel.getActiveCarouselItemIndex()-1, {animation: 'none'});
                                 }
 
                             });
                         });
-                        // TODO: removeDay
+                        // TODO: removeDay or closeDay
+
 
                     };
 

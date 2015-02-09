@@ -341,7 +341,7 @@
 .months-list .day-item .icons div.scissors {
   background-image: url(../img/icon-scissors.png);
 }
-.months-list ons-col:nth-child(7n-1),
-.months-list ons-col:nth-child(7n) {
-  color: #c90000;
+.months-list ons-col:nth-child(7n-1) span,
+.months-list ons-col:nth-child(7n) span {
+  color: #c90000 !important;
 }

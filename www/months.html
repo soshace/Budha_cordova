@@ -1,9 +1,13 @@
 <ons-page ng-controller="monthController" style="background: url('img/bg-tile.jpg')">
     <ons-toolbar modifier="opacity">
         <div class="left">
-            <ons-toolbar-button ng-click="app.navi.popPage()">Сегодня</ons-toolbar-button>
+            <ons-toolbar-button ng-click="app.navi.popPage({animation: 'none'});app.navi.popPage({animation: 'none'});">
+                Сегодня
+            </ons-toolbar-button>
         </div>
-        <div class="center">{{year}}</div>
+        <div class="center">
+            <ons-toolbar-button ng-click="app.navi.popPage({animation: 'none'})">Year</ons-toolbar-button>
+        </div>
         <div class="right">
             <ons-toolbar-button ng-click="app.navi.pushPage('info.html')"><i class="icon icon-info"></i>
             </ons-toolbar-button>
@@ -23,9 +27,10 @@
 
             <div class="green months-list">
                 <div class="month-item" ng-repeat="month in months" border="1">
-                    <h3>{{monthNames[month[0][6].dateParsed.getMonth()] | uppercase}}</h3>
+                    <h3 class="month-item-{{month[0][6].dateParsed.getFullYear()}}-{{month[0][6].dateParsed.getMonth()}}">
+                        {{monthNames[month[0][6].dateParsed.getMonth()] | uppercase}}</h3>
                     <ons-row ng-repeat="week in month">
-                        <ons-col ng-repeat="day in week track by $index">
+                        <ons-col ng-repeat="day in week track by $index" ng-click="selectDay(day)">
                             <div ng-show="day" class="day-item">
                                 <div class="days">
                                     <span>{{day.dateParsed | date:'d'}}</span>

@@ -167,7 +167,7 @@
                         var allowLeft = true;
                         app.carousel.on('postchange', function (e) {
                             console.log('---------------------------------');
-                            console.log('setPostChange');
+                            console.log('postChange');
                             console.log('itemFirst ' + itemFirst + ' itemLast ' + itemLast);
                             console.log('itemCurrent ' + itemCurrent);
                             console.log(e.lastActiveIndex);
@@ -213,10 +213,16 @@
                 if (days) {
                     days = JSON.parse(days);
                     ons.ready(function () {
-                        app.navi.pushPage('months.html');
+                        //app.navi.on('postpush', function (event) {
+                        //    if (event.enterPage.name === 'index.html') {
+                        //        app.carousel._element.empty();
+                        //        setCurrentDate(today);
+                        //        app.carousel.refresh();
+                        //    }
+                        //});
+                        console.log('ons onready');
                         setCurrentDate(today);
                         setPostChange();
-
                         app.carousel.refresh();
 
                     });
@@ -225,7 +231,10 @@
                     $http.get('http://api.budha.topsdigital.ru/api/v1/year/' + year).success(function (result) {
                         days = result.info;
                         window.localStorage.setItem('year' + year, JSON.stringify(days));
+                        setCurrentDate(today);
                         setPostChange();
+                        app.carousel.refresh();
+
                     });
                 }
 
@@ -242,6 +251,16 @@
 
                 });
 
+                $scope.$on('dayclick', function (event, day) {
+                    console.log('dayclick');
+                    console.log(day.date);
+                    app.navi.popPage({animation: 'none'});
+                    app.navi.popPage({animation: 'none'});
+                    app.carousel._element.empty();
+                    setCurrentDate(day.date);
+                    app.carousel.refresh();
+                });
+
             }])
 
         .controller('yearController', ['$scope', '$http', '$rootScope', '$sce', function ($scope, $rootScope, $sce) {
@@ -249,7 +268,14 @@
             $scope.months = I18n.pick('month');
 
             $scope.selectMonth = function (index, year) {
-                app.navi.pushPage('months.html');
+                app.navi.pushPage('months.html', {
+                    animation: 'none', onTransitionEnd: function () {
+                        document.getElementsByClassName('month-item-' + year + '-' + index)[0].scrollIntoView();
+
+                    }
+                });
+                console.log('month-item-' + year + '-' + index);
+
             }
         }])
 
@@ -339,31 +365,22 @@
                 }
                 ;
 
-            //mask.forEach(function (i) {
-            //    var $ul = $('#item' + id + ' .icons ul');
-            //    var $li = $('<li class="' + symbols[i] + '"></li>');
-            //    $ul.append($li);
-            //    ons.createPopover('popover.html').then(function (popover) {
-            //        popover._element.find('p').html(I18n.pick('symbols', i));
-            //        $li.click(function () {
-            //            popover.show($li[0]);
-            //        });
-            //        item.popovers.push(popover);
-            //    });
-            //});
+            $scope.selectDay = function (day) {
+                console.log('selectDay');
+                $rootScope.$broadcast('dayclick', day);
+            };
 
-            //months = window.localStorage.getItem('months');
+            months = splitWeeks(fillWeeks(splitMonths(dates)));
+
             //if (!months) {
             //    months = splitWeeks(fillWeeks(splitMonths(dates)));
-            //    window.localStorage.setItem('months', JSON.parse(months));
+            //    window.localStorage.setItem('months', months);
             //}
-            //// добавить год
 
             $scope.weekdays = I18n.pick('weekday');
-            $scope.months = splitWeeks(fillWeeks(splitMonths(dates)));
+            $scope.months = months;
             $scope.monthNames = I18n.pick('month');
             console.log($scope.months);
-
 
 
         }])
@@ -391,7 +408,6 @@
             };
 
         }]);
-
 
 
 })();

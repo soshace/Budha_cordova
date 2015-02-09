@@ -27,6 +27,7 @@
 /* Pages */
 .app-page.main-page {
   height: 100%;
+  background: url("../img/bg-tile.jpg") repeat scroll 0px 0px transparent;
 }
 .app-page.main-page .green {
   background: url(../img/bg-tile.jpg) 0 0 repeat;
@@ -73,7 +74,7 @@
   content: ' ';
 }
 .app-page.main-page .main .date {
-  padding: 0 .5em;
+  padding: 0.6em 1em;
   font-size: 38px;
   text-align: center;
 }
@@ -166,6 +167,7 @@
 .app-page.main-page .description .description-content {
   padding: 1em;
   font-size: 14px;
+  background: #f9fafb;
 }
 .app-page.info-page {
   padding: 12px 8px;

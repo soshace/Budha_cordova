@@ -220,3 +220,128 @@
 .year-list ons-list-item:last-child .month-item {
   border-bottom: none !important;
 }
+/* Months */
+.week-days {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  z-index: 999;
+}
+.week-days ons-col {
+  color: white;
+  z-index: 9999;
+}
+.week-days .bg {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #2e5500;
+  opacity: 0.6;
+}
+.months-list {
+  position: absolute;
+  width: 100%;
+  margin-top: 0.5em;
+}
+.months-list .month-item {
+  display: block;
+  width: 100%;
+}
+.months-list .month-item:nth-child(1) {
+  margin-top: 4vh !important;
+}
+.months-list h3 {
+  color: white;
+  margin: 1vh 2vw 0;
+}
+.months-list .day-item {
+  background-color: #FFF;
+  margin: 0.5vh 0.3vw;
+  height: 22vw;
+}
+.months-list .day-item .days {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 20%;
+  margin: 1vw 0;
+}
+.months-list .day-item .days span {
+  position: absolute;
+  padding: 0 1.5vw;
+}
+.months-list .day-item .days span:first-child {
+  font-size: 4vw;
+  font-weight: bold;
+  left: 0.5vw;
+}
+.months-list .day-item .days span:last-child {
+  right: 0.5vw;
+  color: gray;
+  font-size: 3.5vw;
+  line-height: 1.4;
+}
+.months-list .day-item .icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1.5vw;
+  text-align: center;
+  list-style-type: none;
+}
+.months-list .day-item .icons div {
+  display: inline-block;
+  float: left;
+  width: 3.5vw;
+  height: 3.5vw;
+  margin: 0.5vw;
+  background-repeat: no-repeat;
+  background-size: 80% auto;
+}
+.months-list .day-item .icons div.baljinima {
+  background-image: url(../img/icon-baljinima.png);
+}
+.months-list .day-item .icons div.black {
+  background-image: url(../img/icon-black.png);
+}
+.months-list .day-item .icons div.buddha {
+  background-color: #fff2d8;
+  background-image: url(../img/icon-buddha.png);
+}
+.months-list .day-item .icons div.dashinima {
+  background-image: url(../img/icon-dashinima.png);
+}
+.months-list .day-item .icons div.empty {
+  background-image: url(../img/icon-empty.png);
+}
+.months-list .day-item .icons div.fate {
+  background-image: url(../img/icon-fate.png);
+}
+.months-list .day-item .icons div.fly {
+  background-image: url(../img/icon-fly.png);
+}
+.months-list .day-item .icons div.great {
+  background-image: url(../img/icon-great.png);
+}
+.months-list .day-item .icons div.jubilee {
+  background-image: url(../img/icon-jubilee.png);
+}
+.months-list .day-item .icons div.lustanaga {
+  background-image: url(../img/icon-lustanaga.png);
+}
+.months-list .day-item .icons div.pill {
+  background-image: url(../img/icon-pill.png);
+}
+.months-list .day-item .icons div.scissors {
+  background-image: url(../img/icon-scissors.png);
+}
+.months-list ons-col:nth-child(7n-1),
+.months-list ons-col:nth-child(7n) {
+  color: #c90000;
+}

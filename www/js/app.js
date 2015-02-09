@@ -22,7 +22,8 @@
         itemFirst,
         itemLast,
         itemCurrent,
-        appScope
+        appScope,
+        dates
         ;
 
     angular.module('app', ['onsen', 'templator'])
@@ -198,11 +199,11 @@
                                 console.log('action taken');
                                 app.carousel.refresh();
                                 if (dir < 0) {
-                                    !allowRight && app.carousel.setActiveCarouselItemIndex(app.carousel.getActiveCarouselItemIndex()+1, {animation: 'none'});
+                                    !allowRight && app.carousel.setActiveCarouselItemIndex(app.carousel.getActiveCarouselItemIndex() + 1, {animation: 'none'});
                                     //itemLast--;
                                     //itemCurrent--;
                                 } else {
-                                    !allowLeft && app.carousel.setActiveCarouselItemIndex(app.carousel.getActiveCarouselItemIndex()-1, {animation: 'none'});
+                                    !allowLeft && app.carousel.setActiveCarouselItemIndex(app.carousel.getActiveCarouselItemIndex() - 1, {animation: 'none'});
                                 }
 
                             });
@@ -212,6 +213,7 @@
                 if (days) {
                     days = JSON.parse(days);
                     ons.ready(function () {
+                        app.navi.pushPage('months.html');
                         setCurrentDate(today);
                         setPostChange();
 
@@ -226,6 +228,9 @@
                         setPostChange();
                     });
                 }
+
+                dates = days;
+
                 $scope.$on('lang-change', function () {
                     console.log('lang-change');
 
@@ -243,10 +248,124 @@
             $scope.years = [2014, 2015];
             $scope.months = I18n.pick('month');
 
-            $scope.selectMonth = function(index, year) {
-                alert(index + ' hoorray ' + year);
+            $scope.selectMonth = function (index, year) {
                 app.navi.pushPage('months.html');
             }
+        }])
+
+        .controller('monthController', ['$scope', '$http', '$rootScope', '$sce', function ($scope, $http, $rootScope, $sce) {
+            var months,
+                maskRow = function (mask) {
+                    var a = [],
+                        j, l = mask.length - 1;
+                    for (j = l; j >= 0; j--) {
+                        if ('1' === mask.substr(j, 1))
+                            a.push(l - j);
+                    }
+                    return a;
+                },
+                splitMonths = function (dateItems) {
+                    var monthIndex = 0,
+                        monthItems = [[], [], [], [], [], [], [], [], [], [], [], []],
+                        currentMonth = 0,
+                        lastMonth = 0,
+                        mask,
+                        maskElem
+                        ;
+
+                    for (var i = 0; i < dateItems.length; i++) {
+                        dateItems[i]['dateParsed'] = new Date(dateItems[i]['date']);
+                        mask = maskRow(dateItems[i]['mask'].toString());
+
+                        var ul = ['<div class="icons">'], li;
+                        mask.forEach(function (i) {
+                            li = '<div class="' + symbols[i] + '"></div>';
+                            ul.push(li);
+                        });
+                        ul.push('</div>');
+                        dateItems[i]['maskElem'] = $sce.trustAsHtml(ul.join(''));
+
+                        currentMonth = dateItems[i]['dateParsed'].getMonth();
+                        if (lastMonth != currentMonth) {
+                            monthIndex++;
+                        }
+
+                        monthItems[monthIndex].push(dateItems[i]);
+                        lastMonth = currentMonth;
+                    }
+                    return monthItems;
+                },
+                fillWeeks = function (monthItems) {
+                    var itemsToUnshift, itemsToPush;
+                    monthItems.forEach(function (elem, index, arr) {
+                        itemsToUnshift = elem[0].dateParsed.getDay() - 1;
+                        itemsToPush = 7 - elem[elem.length - 1].dateParsed.getDay();
+
+                        if (itemsToUnshift == -1) itemsToUnshift = 6;
+
+                        for (var i = 0; i < itemsToUnshift; i++) {
+                            elem.unshift("");
+                        }
+                        for (i = 0; i < itemsToPush; i++) {
+                            elem.push("");
+                        }
+
+                    });
+                    return monthItems;
+                },
+                splitWeeks = function (monthItems) {
+                    var weeks = [],
+                        months = [],
+                        currentWeek,
+                        dayCounter,
+                        weekCounter
+                        ;
+
+                    monthItems.forEach(function (elem, index) {
+                        weeks = [];
+                        //months.push([]);
+                        currentWeek = 0;
+                        dayCounter = 0;
+                        weekCounter = (elem.length == 35) ? 5 : 6;
+                        for (var week = 0; week < weekCounter; week++) {
+                            //months[index].push([]);
+                            //months[index].push(elem.slice(dayCounter, dayCounter + 7));
+                            weeks[week] = elem.slice(dayCounter, dayCounter + 7);
+                            dayCounter += 7;
+                        }
+                        months[index] = weeks;
+                    });
+                    return months;
+                }
+                ;
+
+            //mask.forEach(function (i) {
+            //    var $ul = $('#item' + id + ' .icons ul');
+            //    var $li = $('<li class="' + symbols[i] + '"></li>');
+            //    $ul.append($li);
+            //    ons.createPopover('popover.html').then(function (popover) {
+            //        popover._element.find('p').html(I18n.pick('symbols', i));
+            //        $li.click(function () {
+            //            popover.show($li[0]);
+            //        });
+            //        item.popovers.push(popover);
+            //    });
+            //});
+
+            //months = window.localStorage.getItem('months');
+            //if (!months) {
+            //    months = splitWeeks(fillWeeks(splitMonths(dates)));
+            //    window.localStorage.setItem('months', JSON.parse(months));
+            //}
+            //// добавить год
+
+            $scope.weekdays = I18n.pick('weekday');
+            $scope.months = splitWeeks(fillWeeks(splitMonths(dates)));
+            $scope.monthNames = I18n.pick('month');
+            console.log($scope.months);
+
+
+
         }])
 
         .controller('infoController', ['$scope', '$rootScope', '$sce', function ($scope, $rootScope, $sce) {
@@ -272,6 +391,7 @@
             };
 
         }]);
+
 
 
 })();

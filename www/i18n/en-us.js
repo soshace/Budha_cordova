@@ -1,4 +1,5 @@
 I18n.set('en-us', {
+    language: 'English',
     month: [
         "January",
         "February",

@@ -26,18 +26,18 @@
         dates
         ;
 
-    angular.module('app', ['onsen', 'templator'])
-
+    angular.module('app', ['onsen', 'templator', 'yearServices'])
         .controller('appController', ['$scope', function ($scope) {
             appScope = $scope;
             I18n.setLanguage(lang);
+            $scope.I18N = I18n;
             $scope.i18n = I18n.pick();
             $scope.symbols = symbols;
         }])
 
         .controller('mainController', [
-            '$scope', '$http', '$templateCache', '$filter', '$locale', 't',
-            function ($scope, $http, $templateCache, $filter, $locale, t) {
+            '$scope', '$http', '$templateCache', '$filter', '$locale', 't', 'Year',
+            function ($scope, $http, $templateCache, $filter, $locale, t, Year) {
                 var todayDate = new Date(),
                     year = todayDate.getFullYear(),
                     month = todayDate.getMonth() + 1,
@@ -200,8 +200,6 @@
                                 app.carousel.refresh();
                                 if (dir < 0) {
                                     !allowRight && app.carousel.setActiveCarouselItemIndex(app.carousel.getActiveCarouselItemIndex() + 1, {animation: 'none'});
-                                    //itemLast--;
-                                    //itemCurrent--;
                                 } else {
                                     !allowLeft && app.carousel.setActiveCarouselItemIndex(app.carousel.getActiveCarouselItemIndex() - 1, {animation: 'none'});
                                 }
@@ -212,15 +210,8 @@
 
                 if (days) {
                     days = JSON.parse(days);
+                    dates = days;
                     ons.ready(function () {
-                        //app.navi.on('postpush', function (event) {
-                        //    if (event.enterPage.name === 'index.html') {
-                        //        app.carousel._element.empty();
-                        //        setCurrentDate(today);
-                        //        app.carousel.refresh();
-                        //    }
-                        //});
-                        console.log('ons onready');
                         setCurrentDate(today);
                         setPostChange();
                         app.carousel.refresh();
@@ -228,17 +219,24 @@
                     });
                 }
                 else {
-                    $http.get('http://api.budha.topsdigital.ru/api/v1/year/' + year).success(function (result) {
+                    Year.get({year: year}, function(result) {
                         days = result.info;
                         window.localStorage.setItem('year' + year, JSON.stringify(days));
                         setCurrentDate(today);
                         setPostChange();
                         app.carousel.refresh();
-
+                        dates = days;
                     });
-                }
 
-                dates = days;
+                    //$http.get('http://api.budha.topsdigital.ru/api/v1/year/' + year).success(function (result) {
+                    //    days = result.info;
+                    //    window.localStorage.setItem('year' + year, JSON.stringify(days));
+                    //    setCurrentDate(today);
+                    //    setPostChange();
+                    //    app.carousel.refresh();
+                    //    dates = days;
+                    //});
+                }
 
                 $scope.$on('lang-change', function () {
                     console.log('lang-change');
@@ -263,7 +261,7 @@
 
             }])
 
-        .controller('yearController', ['$scope', '$http', '$rootScope', '$sce', function ($scope, $rootScope, $sce) {
+        .controller('yearController', ['$scope', '$http', '$rootScope', '$sce', 'Year', function ($scope, $http, $rootScope, $sce, Year) {
             $scope.years = [2014, 2015];
             $scope.months = I18n.pick('month');
 
@@ -366,21 +364,20 @@
                 ;
 
             $scope.selectDay = function (day) {
-                console.log('selectDay');
-                $rootScope.$broadcast('dayclick', day);
+                if (day) {
+                    $rootScope.$broadcast('dayclick', day);
+                }
             };
 
-            months = splitWeeks(fillWeeks(splitMonths(dates)));
+            months = window.localStorage.getItem('months') || splitWeeks(fillWeeks(splitMonths(dates)));
 
-            //if (!months) {
-            //    months = splitWeeks(fillWeeks(splitMonths(dates)));
-            //    window.localStorage.setItem('months', months);
-            //}
+            if (!months) {
+                window.localStorage.setItem('months', months);
+            }
 
             $scope.weekdays = I18n.pick('weekday');
             $scope.months = months;
             $scope.monthNames = I18n.pick('month');
-            console.log($scope.months);
 
 
         }])

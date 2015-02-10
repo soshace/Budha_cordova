@@ -2,11 +2,11 @@
     <ons-toolbar modifier="opacity">
         <div class="left">
             <ons-toolbar-button ng-click="app.navi.popPage({animation: 'none'});app.navi.popPage({animation: 'none'});">
-                Сегодня
+                {{i18n.today}}
             </ons-toolbar-button>
         </div>
         <div class="center">
-            <ons-toolbar-button ng-click="app.navi.popPage({animation: 'none'})">Year</ons-toolbar-button>
+            <ons-toolbar-button ng-click="app.navi.popPage({animation: 'none'})">Year(change me)</ons-toolbar-button>
         </div>
         <div class="right">
             <ons-toolbar-button ng-click="app.navi.pushPage('info.html')"><i class="icon icon-info"></i>
@@ -21,7 +21,8 @@
             <div class="week-days">
                 <div class="bg"></div>
                 <ons-row class="content-padded">
-                    <ons-col ng-repeat="weekday in weekdays">{{weekday}}</ons-col>
+                    <ons-col ng-repeat="weekday in weekdays" ng-if="$index!=0">{{weekday}}</ons-col>
+                    <ons-col ng-repeat="weekday in weekdays" ng-if="$index==$last">{{weekday}}</ons-col>
                 </ons-row>
             </div>
 

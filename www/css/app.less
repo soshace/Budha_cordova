@@ -88,14 +88,14 @@
       }
 
       .date {
-        padding: 0.6em 1em;
-        font-size: 38px;
+        padding: 3vh 1vw;
+        font-size: 7vh;
         text-align: center;
 
         .number {
           padding: 0;
           line-height: 60px;
-          font-size: 90px;
+          font-size: 15vh;
           font-weight: bold;
         }
       }
@@ -104,34 +104,27 @@
         margin: 0 auto;
         text-align: center;
 
-        &.icons-1 {
-          width: 43px;
-        }
-        &.icons-2 {
-          width: 96px;
-        }
-        &.icons-3 {
-          width: 149px;
-        }
-        &.icons-4 {
-          width: 202px;
-        }
-        &.icons-5 {
-          width: 255px;
-        }
-
         ul {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+
           list-style-type: none;
           margin: 0;
-          padding: .5em 0;
+          padding: .5vw 0;
 
           li {
             display: inline-block;
             float: left;
             margin-left: 10px;
-            width: 43px;
-            height: 43px;
-            border-bottom: 0.2em solid #609126;
+            width: 10vw;
+            height: 10vw;
+            max-width: 12vh;
+            max-height: 12vh;
+//            border-bottom: 0.2em solid #609126;
             background-color: #fff;
             background-position: 50% 50%;
             background-repeat: no-repeat;

@@ -23,7 +23,8 @@
         itemLast,
         itemCurrent,
         appScope,
-        dates
+        dates,
+        currentDate
         ;
 
     angular.module('app', ['onsen', 'templator', 'yearServices'])
@@ -36,8 +37,8 @@
         }])
 
         .controller('mainController', [
-            '$scope', '$http', '$templateCache', '$filter', '$locale', 't', 'Year',
-            function ($scope, $http, $templateCache, $filter, $locale, t, Year) {
+            '$scope', '$http', '$templateCache', '$filter', '$locale', 't', 'Year', 'YearInfo', 'YearDay',
+            function ($scope, $http, $templateCache, $filter, $locale, t, Year, YearInfo, YearDay) {
                 var todayDate = new Date(),
                     year = todayDate.getFullYear(),
                     month = todayDate.getMonth() + 1,
@@ -82,8 +83,7 @@
                                 date: Ymd[2],
                                 weekday: I18n.pick('weekday', idate.getDay()),
                                 moonday: day.moon_day,
-                                description: day.description[lang.split('-')[0]],
-                                symcount: mask.length
+                                description: day.description[lang.split('-')[0]]
                             }),
 
                             item = {
@@ -206,6 +206,16 @@
 
                             });
                         });
+                    },
+                    selectMonth = function (month, year) {
+                        app.navi.pushPage('months.html', {
+                            animation: 'none', onTransitionEnd: function () {
+                                document.getElementsByClassName('month-item-' + year + '-' + month)[0].scrollIntoView();
+
+                            }
+                        });
+                        console.log('month-item-' + year + '-' + month);
+
                     };
 
                 if (days) {
@@ -215,11 +225,31 @@
                         setCurrentDate(today);
                         setPostChange();
                         app.carousel.refresh();
-
+                        //showAd(true);
                     });
                 }
                 else {
-                    Year.get({year: year}, function(result) {
+                    for (var i = 0; i < 5; i++) {
+                        YearDay.get({day: '12.12.2015', language: 'ru'}, function (result) {
+                            console.log('getDay');
+                            console.log(result);
+                        });
+                    }
+
+                    Year.getDetailed({year: 2015}, function (result) {
+                        console.log('getDetailed');
+                        console.log(result);
+                        //days = result.info;
+                        //window.localStorage.setItem('year' + year, JSON.stringify(days));
+                        //setCurrentDate(today);
+                        //setPostChange();
+                        //app.carousel.refresh();
+                        //dates = days;
+                    });
+
+                    $http.get('http://api.budha.topsdigital.ru/api/v1/year/' + year).success(function (result) {
+                        console.log('http');
+                        console.log(result);
                         days = result.info;
                         window.localStorage.setItem('year' + year, JSON.stringify(days));
                         setCurrentDate(today);
@@ -227,16 +257,19 @@
                         app.carousel.refresh();
                         dates = days;
                     });
-
-                    //$http.get('http://api.budha.topsdigital.ru/api/v1/year/' + year).success(function (result) {
-                    //    days = result.info;
-                    //    window.localStorage.setItem('year' + year, JSON.stringify(days));
-                    //    setCurrentDate(today);
-                    //    setPostChange();
-                    //    app.carousel.refresh();
-                    //    dates = days;
-                    //});
                 }
+
+                $scope.goToMonths = function (year) {
+                    var year,
+                        month,
+                        id = document.getElementsByTagName('ons-carousel-item')[app.carousel.getActiveCarouselItemIndex()].id;
+                    id = id.replace('item', '');
+                    year = parseInt(id.slice(0, 4));
+                    month = parseInt(id.slice(4, 6));
+
+                    selectMonth(month - 1, year);
+
+                };
 
                 $scope.$on('lang-change', function () {
                     console.log('lang-change');
@@ -253,7 +286,6 @@
                     console.log('dayclick');
                     console.log(day.date);
                     app.navi.popPage({animation: 'none'});
-                    app.navi.popPage({animation: 'none'});
                     app.carousel._element.empty();
                     setCurrentDate(day.date);
                     app.carousel.refresh();
@@ -261,21 +293,26 @@
 
             }])
 
-        .controller('yearController', ['$scope', '$http', '$rootScope', '$sce', 'Year', function ($scope, $http, $rootScope, $sce, Year) {
-            $scope.years = [2014, 2015];
-            $scope.months = I18n.pick('month');
+        .controller('yearController', ['$scope', '$http', '$rootScope', '$sce', '$location', 'Year',
+            function ($scope, $http, $rootScope, $sce, $location, Year) {
+                $scope.years = [2014, 2015];
+                $scope.months = I18n.pick('month');
 
-            $scope.selectMonth = function (index, year) {
-                app.navi.pushPage('months.html', {
-                    animation: 'none', onTransitionEnd: function () {
-                        document.getElementsByClassName('month-item-' + year + '-' + index)[0].scrollIntoView();
+                $scope.selectMonth = function (index, year) {
+                    app.navi.popPage();
+                    //$location.url('#month-item-' + year + '-' + index);
+                    document.getElementsByClassName('month-item-' + year + '-' + index)[0].scrollIntoView();
 
-                    }
-                });
-                console.log('month-item-' + year + '-' + index);
+                    //app.navi.pushPage('months.html', {
+                    //    animation: 'none', onTransitionEnd: function () {
+                    //        document.getElementsByClassName('month-item-' + year + '-' + index)[0].scrollIntoView();
+                    //
+                    //    }
+                    //});
+                    console.log('month-item-' + year + '-' + index);
 
-            }
-        }])
+                }
+            }])
 
         .controller('monthController', ['$scope', '$http', '$rootScope', '$sce', function ($scope, $http, $rootScope, $sce) {
             var months,

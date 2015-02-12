@@ -23,9 +23,48 @@
     <script src="i18n/en-us.js"></script>
     <script src="i18n/mn-cyrl.js"></script>
     <script src="cordova.js"></script>
+    <script src="js/admob.js"></script>
     <script src="js/templator.js"></script>
     <script src="js/services.js"></script>
     <script src="js/app.js"></script>
+    <script>
+        function miAdmob() {
+            var admob_ios_key = 'ca-app-pub-7129587525075833/8641100221'; //put your admob IOS id here
+            var admob_android_key = 'ca-app-pub-7129587525075833/2734167425'; //put your admob ANDROID id here
+            var adId = (navigator.userAgent.indexOf('Android') >= 0) ?
+                    admob_android_key : admob_ios_key; //Detects if the mobile is ios or android and puts the id you need
+
+            if (window.plugins && window.plugins.AdMob) {
+x
+                var am = window.plugins.AdMob;
+                am.createBannerView(
+                        {
+                            'publisherId': adId, //Add your publisher id
+                            'adSize': am.AD_SIZE.BANNER, // for banner type
+                            'bannerAtTop': false //Indicates whether you want the banner above all (true) or down at all (false)
+                        }, function () {
+                            am.requestAd({'isTesting': true}, function () {
+                                am.showAd(true);
+                            }, function () {
+                                alert('Failed to load the ad');
+                            })
+                        }, function () {
+                            alert("Failed to create the ad view");
+                        });
+            } else {
+                alert('The AdMob plugin not ready.');
+            }
+        }
+        function showAd(bshow) {
+            if (window.plugins && window.plugins.AdMob) {
+                var am = window.plugins.AdMob;
+                am.showAd(bshow);
+            } else {
+                alert('The AdMob plugin not ready');
+            }
+        }
+
+    </script>
 </head>
 
 <body ng-controller="appController">
@@ -34,7 +73,7 @@
     <ons-page ng-controller="mainController">
         <ons-toolbar modifier="opacity">
             <div class="left">
-                <ons-toolbar-button ng-click="app.navi.pushPage('year.html')">{{i18n.title}}</ons-toolbar-button>
+                <ons-toolbar-button ng-click="goToMonths()">{{i18n.title}}</ons-toolbar-button>
             </div>
             <div class="center">{{i18n.today}}</div>
             <div class="right">
@@ -60,16 +99,20 @@
                             <span class="number">{{date}}</span>
                             {{month}}
                         </div>
-                        <div class="icons icons-{{symcount}}">
+                        <div class="icons">
                             <ul></ul>
                         </div>
                     </div>
 
-                    <ons-scroller class="description">
+                    <ons-list class="description">
                         <div class="description-content">
                             {{description}}
                         </div>
-                    </ons-scroller>
+                        <div>
+                            <p><button onclick="showAd(true);">Display ad</button></p>
+                            <!--<p><button onclick="showAd(false);">Hide ad</button></p>-->
+                        </div>
+                    </ons-list>
                 </div>
             </ons-carousel-item>
         </ons-template>

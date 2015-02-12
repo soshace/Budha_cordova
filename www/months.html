@@ -1,12 +1,12 @@
 <ons-page ng-controller="monthController" style="background: url('img/bg-tile.jpg')">
     <ons-toolbar modifier="opacity">
         <div class="left">
-            <ons-toolbar-button ng-click="app.navi.popPage({animation: 'none'});app.navi.popPage({animation: 'none'});">
+            <ons-toolbar-button ng-click="app.navi.popPage({animation: 'none'});">
                 {{i18n.today}}
             </ons-toolbar-button>
         </div>
         <div class="center">
-            <ons-toolbar-button ng-click="app.navi.popPage({animation: 'none'})">Year(change me)</ons-toolbar-button>
+            <ons-toolbar-button ng-click="app.navi.pushPage('year.html', {animation: 'none'})">Year(change me)</ons-toolbar-button>
         </div>
         <div class="right">
             <ons-toolbar-button ng-click="app.navi.pushPage('info.html')"><i class="icon icon-info"></i>

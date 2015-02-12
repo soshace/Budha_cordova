@@ -23,6 +23,10 @@
                         {
                             "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AdMob\"><param name=\"android-package\" value=\"com.rjfun.cordova.plugin.AdMob\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -34,8 +38,50 @@
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
                             "count": 1
                         }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<meta-data android:name=\"com.google.android.gms.version\" android:value=\"@integer/google_play_services_version\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 1
+                        }
                     ]
                 }
+            }
+        },
+        "AndroidManifest.xml": {
+            "/manifest/application": {
+                "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />": 0,
+                "<meta-data android:name=\"com.google.android.gms.version\" android:value=\"@integer/google_play_services_version\" />": 0
+            },
+            "/*": {
+                "<uses-permission android:name=\"android.permission.INTERNET\" />": 0,
+                "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />": 0
+            },
+            "/manifest": {
+                "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />": 0
+            }
+        },
+        "res/xml/config.xml": {
+            "/*": {
+                "<feature name=\"DatePickerPlugin\"><param name=\"android-package\" value=\"com.plugin.datepicker.DatePickerPlugin\" /></feature>": 0,
+                "<feature name=\"AdMob\"><param name=\"android-package\" value=\"com.rjfun.cordova.plugin.AdMob\" /></feature>": 0,
+                "<feature name=\"EmailComposer\"><param name=\"android-package\" value=\"de.appplant.cordova.emailcomposer.EmailComposer\" /></feature>": 0,
+                "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>": 0,
+                "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>": 0
             }
         }
     },
@@ -51,7 +97,17 @@
         },
         "org.apache.cordova.inappbrowser": {
             "PACKAGE_NAME": "com.restaurant.start"
+        },
+        "com.rjfun.cordova.plugin.admob": {
+            "PACKAGE_NAME": "com.restaurant.start"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "com.google.playservices": {
+            "PACKAGE_NAME": "com.restaurant.start"
+        },
+        "com.google.admobsdk": {
+            "PACKAGE_NAME": "com.restaurant.start"
+        }
+    }
 }

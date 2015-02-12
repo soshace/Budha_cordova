@@ -11,6 +11,10 @@
                         {
                             "xml": "true",
                             "count": 2
+                        },
+                        {
+                            "xml": "false",
+                            "count": 1
                         }
                     ],
                     "Social.framework": [
@@ -20,6 +24,66 @@
                         }
                     ],
                     "CoreGraphics.framework": [
+                        {
+                            "xml": "false",
+                            "count": 2
+                        }
+                    ],
+                    "AdSupport.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "AudioToolbox.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "AVFoundation.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "CoreTelephony.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "EventKit.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "EventKitUI.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "Foundation.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "StoreKit.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "SystemConfiguration.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "UIKit.framework": [
                         {
                             "xml": "false",
                             "count": 1
@@ -45,6 +109,10 @@
                         {
                             "xml": "<feature name=\"DatePicker\"><param name=\"ios-package\" value=\"DatePicker\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AdMob\"><param name=\"ios-package\" value=\"CDVAdMob\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -63,7 +131,14 @@
         },
         "com.plugin.datepicker": {
             "PACKAGE_NAME": "com.restaurant.start"
+        },
+        "com.rjfun.cordova.plugin.admob": {
+            "PACKAGE_NAME": "com.restaurant.start"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "com.google.admobsdk": {
+            "PACKAGE_NAME": "com.restaurant.start"
+        }
+    }
 }

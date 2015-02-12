@@ -37,8 +37,8 @@
         }])
 
         .controller('mainController', [
-            '$scope', '$http', '$templateCache', '$filter', '$locale', 't', 'Year', 'YearInfo', 'YearDay',
-            function ($scope, $http, $templateCache, $filter, $locale, t, Year, YearInfo, YearDay) {
+            '$scope', '$rootScope', '$http', '$templateCache', '$filter', '$locale', 't', 'Year', 'YearInfo', 'YearDay',
+            function ($scope, $rootScope, $http, $templateCache, $filter, $locale, t, Year, YearInfo, YearDay) {
                 var todayDate = new Date(),
                     year = todayDate.getFullYear(),
                     month = todayDate.getMonth() + 1,
@@ -210,10 +210,16 @@
                     selectMonth = function (month, year) {
                         app.navi.pushPage('months.html', {
                             animation: 'none', onTransitionEnd: function () {
-                                document.getElementsByClassName('month-item-' + year + '-' + month)[0].scrollIntoView();
+                                var elem = document.getElementsByClassName('month-item-' + year + '-' + month)[0];
 
+                                if (elem.parentNode.previousElementSibling) {
+                                    elem.parentNode.previousElementSibling.lastElementChild.scrollIntoView();
+                                } else {
+                                    elem.parentNode.scrollIntoView();
+                                }
                             }
                         });
+                        $rootScope.year = year;
                         console.log('month-item-' + year + '-' + month);
 
                     };
@@ -259,7 +265,7 @@
                     });
                 }
 
-                $scope.goToMonths = function (year) {
+                $scope.goToMonths = function () {
                     var year,
                         month,
                         id = document.getElementsByTagName('ons-carousel-item')[app.carousel.getActiveCarouselItemIndex()].id;
@@ -298,18 +304,16 @@
                 $scope.years = [2014, 2015];
                 $scope.months = I18n.pick('month');
 
-                $scope.selectMonth = function (index, year) {
+                $scope.selectMonth = function (month, year) {
                     app.navi.popPage();
-                    //$location.url('#month-item-' + year + '-' + index);
-                    document.getElementsByClassName('month-item-' + year + '-' + index)[0].scrollIntoView();
-
-                    //app.navi.pushPage('months.html', {
-                    //    animation: 'none', onTransitionEnd: function () {
-                    //        document.getElementsByClassName('month-item-' + year + '-' + index)[0].scrollIntoView();
-                    //
-                    //    }
-                    //});
-                    console.log('month-item-' + year + '-' + index);
+                    var elem = document.getElementsByClassName('month-item-' + year + '-' + month)[0];
+                    if (elem.parentNode.previousElementSibling) {
+                        elem.parentNode.previousElementSibling.lastElementChild.scrollIntoView();
+                    } else {
+                        elem.parentNode.scrollIntoView();
+                    }
+                    $rootScope.year = year;
+                    console.log('month-item-' + year + '-' + month);
 
                 }
             }])
@@ -411,6 +415,7 @@
             if (!months) {
                 window.localStorage.setItem('months', months);
             }
+
 
             $scope.weekdays = I18n.pick('weekday');
             $scope.months = months;

@@ -25,5 +25,6 @@ I18n.set('en-us', {
     ],
     title: 'Calendar',
     today: 'Today',
-    settings: 'Settings'
+    settings: 'Settings',
+    calendar: 'Calendar'
 });

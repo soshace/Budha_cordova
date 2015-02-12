@@ -37,8 +37,8 @@
         }])
 
         .controller('mainController', [
-            '$scope', '$rootScope', '$http', '$templateCache', '$filter', '$locale', 't', 'Year', 'YearInfo', 'YearDay',
-            function ($scope, $rootScope, $http, $templateCache, $filter, $locale, t, Year, YearInfo, YearDay) {
+            '$scope', '$rootScope', '$http', '$templateCache', '$filter', '$locale', 't', 'selectMonth', 'Year', 'YearInfo', 'YearDay',
+            function ($scope, $rootScope, $http, $templateCache, $filter, $locale, t, selectMonth, Year, YearInfo, YearDay) {
                 var todayDate = new Date(),
                     year = todayDate.getFullYear(),
                     month = todayDate.getMonth() + 1,
@@ -206,23 +206,8 @@
 
                             });
                         });
-                    },
-                    selectMonth = function (month, year) {
-                        app.navi.pushPage('months.html', {
-                            animation: 'none', onTransitionEnd: function () {
-                                var elem = document.getElementsByClassName('month-item-' + year + '-' + month)[0];
-
-                                if (elem.parentNode.previousElementSibling) {
-                                    elem.parentNode.previousElementSibling.lastElementChild.scrollIntoView();
-                                } else {
-                                    elem.parentNode.scrollIntoView();
-                                }
-                            }
-                        });
-                        $rootScope.year = year;
-                        console.log('month-item-' + year + '-' + month);
-
                     };
+
 
                 if (days) {
                     days = JSON.parse(days);
@@ -273,7 +258,12 @@
                     year = parseInt(id.slice(0, 4));
                     month = parseInt(id.slice(4, 6));
 
-                    selectMonth(month - 1, year);
+                    app.navi.pushPage('months.html', {
+                        animation: 'none', onTransitionEnd: function () {
+                            selectMonth(month - 1, year);
+                        }
+                    });
+                    $rootScope.year = year;
 
                 };
 
@@ -299,22 +289,14 @@
 
             }])
 
-        .controller('yearController', ['$scope', '$http', '$rootScope', '$sce', '$location', 'Year',
-            function ($scope, $http, $rootScope, $sce, $location, Year) {
+        .controller('yearController', ['$scope', '$http', '$rootScope', '$sce', '$location', 'selectMonth', 'Year',
+            function ($scope, $http, $rootScope, $sce, $location, selectMonth, Year) {
                 $scope.years = [2014, 2015];
                 $scope.months = I18n.pick('month');
 
                 $scope.selectMonth = function (month, year) {
                     app.navi.popPage();
-                    var elem = document.getElementsByClassName('month-item-' + year + '-' + month)[0];
-                    if (elem.parentNode.previousElementSibling) {
-                        elem.parentNode.previousElementSibling.lastElementChild.scrollIntoView();
-                    } else {
-                        elem.parentNode.scrollIntoView();
-                    }
-                    $rootScope.year = year;
-                    console.log('month-item-' + year + '-' + month);
-
+                    selectMonth(month, year);
                 }
             }])
 
@@ -446,7 +428,19 @@
 
             };
 
-        }]);
+        }])
+        .factory('selectMonth', ['$rootScope', function ($rootScope) {
+            return function (month, year) {
+                var elem = document.getElementsByClassName('month-item-' + year + '-' + month)[0];
 
+                if (elem.parentNode.previousElementSibling) {
+                    elem.parentNode.previousElementSibling.lastElementChild.scrollIntoView();
+                } else {
+                    elem.parentNode.scrollIntoView();
+                }
+                $rootScope.year = year;
+                console.log('month-item-' + year + '-' + month);
+            }
+        }]);
 
 })();

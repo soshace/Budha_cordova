@@ -299,7 +299,6 @@
                 }
 
                 $scope.years = years;
-                $scope.years = [2014, 2015, 2016];
                 $scope.months = I18n.pick('month');
 
                 $scope.selectMonth = function (month, year) {
@@ -404,8 +403,8 @@
                 };
 
                 $scope.yearsTransitionEnd = function () {
-                    document.getElementsByClassName('year-item-'+$rootScope.year)[0].scrollIntoView();
-                    console.log('year-item-'+$rootScope.year);
+                    document.getElementsByClassName('year-item-' + $rootScope.year)[0].scrollIntoView();
+                    console.log('year-item-' + $rootScope.year);
                 };
 
                 currentYear = $rootScope.year;
@@ -455,7 +454,7 @@
             };
 
         }])
-        .factory('selectMonth', ['$rootScope', function ($rootScope) {
+        .factory('selectMonth', ['$rootScope', 'currentYear', function ($rootScope, currentYear) {
             return function (month, year) {
                 var elem = document.getElementsByClassName('month-item-' + year + '-' + month)[0];
                 elem.scrollIntoView();
@@ -464,13 +463,13 @@
                 //} else {
                 //    elem.parentNode.scrollIntoView();
                 //}
-                $rootScope.year = year;
+                currentYear(year);
                 console.log('month-item-' + year + '-' + month);
             }
         }])
-        .factory('cache', ['$rootScope', 'Year', function ($rootScope, Year) {
+        .factory('cache', ['$rootScope', 'currentYear', 'Year', function ($rootScope, currentYear, Year) {
             return function (name) {
-                var year = $rootScope.year;
+                var year = currentYear();
                 if (!window.localStorage.getItem(name)) {
                     Year.get({year: year}, function (res) {
                         window.localStorage.setItem(name, JSON.stringify(res.days));
@@ -478,12 +477,23 @@
                 }
             }
         }])
-        .factory('cacheAll', ['$rootScope', 'cache', function ($rootScope, cache) {
+        .factory('cacheAll', ['$rootScope', 'cache', 'currentYear', function ($rootScope, cache, currentYear) {
             return function () {
-                var year = $rootScope.year;
+                var year = currentYear();
                 cache('month-' + year);
                 cache('year-list');
             }
+        }])
+        .factory('currentYear', ['$rootScope', function ($rootScope) {
+            return function (year) {
+                if (year) {
+                    $rootScope.year = year;
+                } else {
+                    return $rootScope.year || (new Date).getFullYear();
+                }
+
+            }
+
         }]);
 
 })();

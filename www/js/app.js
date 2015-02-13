@@ -458,12 +458,12 @@
         .factory('selectMonth', ['$rootScope', function ($rootScope) {
             return function (month, year) {
                 var elem = document.getElementsByClassName('month-item-' + year + '-' + month)[0];
-
-                if (elem.parentNode.previousElementSibling) {
-                    elem.parentNode.previousElementSibling.lastElementChild.scrollIntoView();
-                } else {
-                    elem.parentNode.scrollIntoView();
-                }
+                elem.scrollIntoView();
+                //if (elem.parentNode.previousElementSibling) {
+                //    elem.parentNode.previousElementSibling.lastElementChild.scrollIntoView();
+                //} else {
+                //    elem.parentNode.scrollIntoView();
+                //}
                 $rootScope.year = year;
                 console.log('month-item-' + year + '-' + month);
             }

@@ -28,7 +28,9 @@
 
             <div class="green months-list">
                 <div class="month-item" ng-repeat="month in months" border="1">
-                    <h3 class="month-item-{{month[0][6].dateParsed.getFullYear()}}-{{month[0][6].dateParsed.getMonth()}}">
+                    <h3>
+                        <span class="month-item-{{month[0][6].dateParsed.getFullYear()}}-{{month[0][6].dateParsed.getMonth()}}"
+                                style="position: absolute; top: -84px;"></span>
                         {{monthNames[month[0][6].dateParsed.getMonth()] | uppercase}}</h3>
                     <ons-row ng-repeat="week in month">
                         <ons-col ng-repeat="day in week track by $index" ng-click="selectDay(day)">

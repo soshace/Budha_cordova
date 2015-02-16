@@ -36,8 +36,8 @@
         }])
 
         .controller('mainController', [
-            '$scope', '$rootScope', '$http', '$templateCache', '$filter', '$locale', 't', 'cacheAll', 'selectMonth', 'Year', 'YearInfo', 'YearDay', 'DaysLoader',
-            function ($scope, $rootScope, $http, $templateCache, $filter, $locale, t, cacheAll, selectMonth, Year, YearInfo, YearDay, DaysLoader) {
+            '$scope', '$rootScope', '$http', '$templateCache', '$filter', '$locale', 't', 'cacheAll', 'currentYear', 'selectMonth', 'Year', 'YearInfo', 'YearDay', 'DaysLoader',
+            function ($scope, $rootScope, $http, $templateCache, $filter, $locale, t, cacheAll, currentYear, selectMonth, Year, YearInfo, YearDay, DaysLoader) {
                 var todayDate = new Date(),
                     year = todayDate.getFullYear(),
                     month = todayDate.getMonth() + 1,
@@ -65,7 +65,9 @@
                         }
                         return a;
                     },
-
+                    surroundDay = function (day) {
+                        return '<span class="number"> '+day+' </span>';
+                    },
                     appendDay = function (index, prepend) {
                         var day = days[index];
                         if (!day) return false;
@@ -74,12 +76,10 @@
                             id = Ymd.join(''),
                             idate = new Date(Ymd[0], Ymd[1] - 1, Ymd[2]),
                             mask = maskRow(day.mask.toString()),
-
                             html = t(carouselItemCache, {
                                 id: id,
                                 year: Ymd[0],
-                                month: I18n.pick('month', Ymd[1] - 1),
-                                date: Ymd[2],
+                                date: (lang=='en-us')?I18n.pick('month', Ymd[1] - 1)+', '+surroundDay(Ymd[2]):surroundDay(Ymd[2]) + I18n.pick('month', Ymd[1] - 1),
                                 weekday: I18n.pick('weekday', idate.getDay()),
                                 moonday: day.moon_day,
                                 description: day.description[lang.split('-')[0]]
@@ -248,6 +248,7 @@
                     console.log('ons is resdy');
                     //cacheAll();
                 });
+
                 $scope.goToMonths = function () {
                     var year,
                         month,
@@ -261,7 +262,7 @@
                             selectMonth(month - 1, year);
                         }
                     });
-                    $rootScope.year = year;
+                    currentYear(year);
 
                 };
 
@@ -299,7 +300,7 @@
                 }
 
                 $scope.years = years;
-                $scope.months = I18n.pick('month');
+                $scope.months = I18n.pick('month_extra');
 
                 $scope.selectMonth = function (month, year) {
                     app.navi.popPage();
@@ -308,10 +309,9 @@
 
             }])
 
-        .controller('monthController', ['$scope', '$http', '$rootScope', '$sce', 'selectMonth', 'Year',
-            function ($scope, $http, $rootScope, $sce, selectMonth, Year) {
+        .controller('monthController', ['$scope', '$http', '$rootScope', '$sce', 'currentYear', 'selectMonth', 'Year',
+            function ($scope, $http, $rootScope, $sce, currentYear, selectMonth, Year) {
                 var months,
-                    currentYear,
                     maskRow = function (mask) {
                         var a = [],
                             j, l = mask.length - 1;
@@ -403,22 +403,21 @@
                 };
 
                 $scope.yearsTransitionEnd = function () {
-                    document.getElementsByClassName('year-item-' + $rootScope.year)[0].scrollIntoView();
-                    console.log('year-item-' + $rootScope.year);
+                    document.getElementsByClassName('year-item-' + currentYear())[0].scrollIntoView();
+                    console.log('year-item-' + currentYear());
                 };
 
-                currentYear = $rootScope.year;
-                months = JSON.parse(window.localStorage.getItem('months-' + currentYear));
-                console.log('months-' + currentYear);
+                months = JSON.parse(window.localStorage.getItem('months-' + currentYear()));
+                console.log('months-' + currentYear());
 
                 if (!months) {
-                    Year.get({year: currentYear}, function (res) {
+                    Year.get({year: currentYear()}, function (res) {
                         months = res.days;
-                        window.localStorage.setItem('months-' + currentYear, JSON.stringify(months));
+                        window.localStorage.setItem('months-' + currentYear(), JSON.stringify(months));
                         months = splitWeeks(fillWeeks(splitMonths(months)));
                         $scope.months = months;
                         var month = parseInt(document.getElementsByTagName('ons-carousel-item')[app.carousel.getActiveCarouselItemIndex()].id.slice(4, 6));
-                        selectMonth(month - 1, currentYear);
+                        selectMonth(month - 1, currentYear());
                     })
                 } else {
                     months = splitWeeks(fillWeeks(splitMonths(months)));
@@ -426,7 +425,7 @@
                 }
 
                 $scope.weekdays = I18n.pick('weekday');
-                $scope.monthNames = I18n.pick('month');
+                $scope.monthNames = I18n.pick('month_extra');
 
 
             }])
@@ -442,7 +441,7 @@
 
         .controller('languageController', ['$scope', '$rootScope', '$sce', function ($scope, $rootScope, $sce) {
             var langs = ['ru-ru', 'en-us', 'mn-cyrl'];
-            $scope.langs = ['Русский', 'Английский', 'Монгольский'];
+            $scope.langs = I18n.pick('languages');
 
             $scope.selectLanguage = function (index) {
                 I18n.setLanguage(langs[index]);
@@ -458,11 +457,6 @@
             return function (month, year) {
                 var elem = document.getElementsByClassName('month-item-' + year + '-' + month)[0];
                 elem.scrollIntoView();
-                //if (elem.parentNode.previousElementSibling) {
-                //    elem.parentNode.previousElementSibling.lastElementChild.scrollIntoView();
-                //} else {
-                //    elem.parentNode.scrollIntoView();
-                //}
                 currentYear(year);
                 console.log('month-item-' + year + '-' + month);
             }
@@ -487,9 +481,9 @@
         .factory('currentYear', ['$rootScope', function ($rootScope) {
             return function (year) {
                 if (year) {
-                    $rootScope.year = year;
+                    $rootScope.currentYear = year;
                 } else {
-                    return $rootScope.year || (new Date).getFullYear();
+                    return $rootScope.currentYear || (new Date).getFullYear();
                 }
 
             }

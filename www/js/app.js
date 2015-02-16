@@ -79,7 +79,7 @@
                             html = t(carouselItemCache, {
                                 id: id,
                                 year: Ymd[0],
-                                date: (lang=='en-us')?I18n.pick('month', Ymd[1] - 1)+', '+surroundDay(Ymd[2]):surroundDay(Ymd[2]) + I18n.pick('month', Ymd[1] - 1),
+                                date: (lang=='en-us')?I18n.pick('month', Ymd[1] - 1)+', '+surroundDay(Ymd[2]):surroundDay(Ymd[2]) + I18n.pick('month_extra', Ymd[1] - 1),
                                 weekday: I18n.pick('weekday', idate.getDay()),
                                 moonday: day.moon_day,
                                 description: day.description[lang.split('-')[0]]
@@ -209,20 +209,6 @@
 
 
                 if (days) {
-                    //DaysLoader().then(function(result) {
-                    //    days = result;
-                    //    console.log(days);
-                    //    dates = days;
-                    //    ons.ready(function () {
-                    //        setCurrentDate(today);
-                    //        setPostChange();
-                    //        app.carousel.refresh();
-                    //        //showAd(true);
-                    //    });
-                    //
-                    //}, function(){
-                    //    console.log('fail');
-                    //});
                     days = JSON.parse(days);
                     console.log(days);
                     dates = days;
@@ -230,7 +216,6 @@
                         setCurrentDate(today);
                         setPostChange();
                         app.carousel.refresh();
-                        //showAd(true);
                     });
                 }
                 else {
@@ -300,7 +285,7 @@
                 }
 
                 $scope.years = years;
-                $scope.months = I18n.pick('month_extra');
+                $scope.months = I18n.pick('month');
 
                 $scope.selectMonth = function (month, year) {
                     app.navi.popPage();
@@ -425,7 +410,7 @@
                 }
 
                 $scope.weekdays = I18n.pick('weekday');
-                $scope.monthNames = I18n.pick('month_extra');
+                $scope.monthNames = I18n.pick('month');
 
 
             }])
@@ -488,6 +473,10 @@
 
             }
 
-        }]);
+        }])
+        .factory('preventDragging', function () {
+
+        });
+
 
 })();

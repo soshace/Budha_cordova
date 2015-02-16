@@ -6571,12 +6571,12 @@ limitations under the License.
         this._scrollTo(scroll);
         event.gesture.preventDefault();
 
-        this._tryFirePostChangeEvent();
+        //this._tryFirePostChangeEvent();
       },
 
       _onDragEnd: function(event) {
         this._scroll = this._scroll - this._getScrollDelta(event);
-        this._tryFirePostChangeEvent();
+        //this._tryFirePostChangeEvent();
 
         if (this._isOverScroll(this._scroll)) {
           this._scrollToKillOverScroll();

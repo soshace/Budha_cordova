@@ -89,15 +89,34 @@
   text-align: center;
 }
 .app-page.main-page .main .icons ul {
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   list-style-type: none;
   margin: 0;
   padding: .5vw 0;
+  display: -webkit-box;
+  /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
+  display: -moz-box;
+  /* OLD: Firefox (buggy) */
+  display: -ms-flexbox;
+  /* MID: IE 10 */
+  display: -webkit-flex;
+  /* NEW, Chrome 21–28, Safari 6.1+ */
+  display: flex;
+  /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  /* OLD… */
+  -ms-flex-align: center;
+  /* You know the drill now… */
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 .app-page.main-page .main .icons ul li {
   display: inline-block;
@@ -255,7 +274,7 @@
 }
 .months-list .day-item {
   background-color: #FFF;
-  margin: 0.5vh 0.3vw;
+  margin: 0.6vh 0.3vw;
   height: 22vw;
 }
 .months-list .day-item .days {

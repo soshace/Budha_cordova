@@ -69,9 +69,9 @@ x
 
 <body ng-controller="appController">
 
-<ons-navigator animation="slide" var="app.navi">
+<ons-navigator animation="slide" var="app.navi" >
     <ons-page ng-controller="mainController">
-        <ons-toolbar modifier="opacity">
+        <ons-toolbar modifier="opacity" ontouchmove="return false;">
             <div class="left">
                 <ons-toolbar-button ng-click="goToMonths()">{{i18n.title}}</ons-toolbar-button>
             </div>
@@ -104,7 +104,7 @@ x
                         </div>
                     </div>
 
-                    <ons-list class="description">
+                    <ons-scroller class="description">
                         <div class="description-content">
                             {{description}}
                         </div>
@@ -112,7 +112,7 @@ x
                             <!--<p><button onclick="showAd(true);">Display ad</button></p>-->
                             <!--<p><button onclick="showAd(false);">Hide ad</button></p>-->
                         <!--</div>-->
-                    </ons-list>
+                    </ons-scrolerl>
                 </div>
             </ons-carousel-item>
         </ons-template>

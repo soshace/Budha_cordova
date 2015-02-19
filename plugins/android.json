@@ -5,40 +5,8 @@
     },
     "config_munge": {
         "files": {
-            "res/xml/config.xml": {
-                "parents": {
-                    "/*": [
-                        {
-                            "xml": "<feature name=\"DatePickerPlugin\"><param name=\"android-package\" value=\"com.plugin.datepicker.DatePickerPlugin\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"EmailComposer\"><param name=\"android-package\" value=\"de.appplant.cordova.emailcomposer.EmailComposer\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"AdMob\"><param name=\"android-package\" value=\"com.rjfun.cordova.plugin.AdMob\" /></feature>",
-                            "count": 1
-                        }
-                    ]
-                }
-            },
             "AndroidManifest.xml": {
                 "parents": {
-                    "/manifest": [
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-                            "count": 1
-                        }
-                    ],
                     "/manifest/application": [
                         {
                             "xml": "<meta-data android:name=\"com.google.android.gms.version\" android:value=\"@integer/google_play_services_version\" />",
@@ -58,56 +26,66 @@
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
                             "count": 1
                         }
+                    ],
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        }
                     ]
                 }
-            }
-        },
-        "AndroidManifest.xml": {
-            "/manifest/application": {
-                "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />": 0,
-                "<meta-data android:name=\"com.google.android.gms.version\" android:value=\"@integer/google_play_services_version\" />": 0
             },
-            "/*": {
-                "<uses-permission android:name=\"android.permission.INTERNET\" />": 0,
-                "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />": 0
-            },
-            "/manifest": {
-                "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />": 0
-            }
-        },
-        "res/xml/config.xml": {
-            "/*": {
-                "<feature name=\"DatePickerPlugin\"><param name=\"android-package\" value=\"com.plugin.datepicker.DatePickerPlugin\" /></feature>": 0,
-                "<feature name=\"AdMob\"><param name=\"android-package\" value=\"com.rjfun.cordova.plugin.AdMob\" /></feature>": 0,
-                "<feature name=\"EmailComposer\"><param name=\"android-package\" value=\"de.appplant.cordova.emailcomposer.EmailComposer\" /></feature>": 0,
-                "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>": 0,
-                "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>": 0
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"DatePickerPlugin\"><param name=\"android-package\" value=\"com.plugin.datepicker.DatePickerPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AdMob\"><param name=\"android-package\" value=\"com.rjfun.cordova.plugin.AdMob\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"EmailComposer\"><param name=\"android-package\" value=\"de.appplant.cordova.emailcomposer.EmailComposer\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
             }
         }
     },
     "installed_plugins": {
+        "com.google.admobsdk": {
+            "PACKAGE_NAME": "ru.topdigital.buddha"
+        },
         "com.plugin.datepicker": {
-            "PACKAGE_NAME": "com.restaurant.start"
-        },
-        "de.appplant.cordova.plugin.email-composer": {
-            "PACKAGE_NAME": "com.restaurant.start"
-        },
-        "nl.x-services.plugins.socialsharing": {
-            "PACKAGE_NAME": "com.restaurant.start"
-        },
-        "org.apache.cordova.inappbrowser": {
-            "PACKAGE_NAME": "com.restaurant.start"
+            "PACKAGE_NAME": "ru.topdigital.buddha"
         },
         "com.rjfun.cordova.plugin.admob": {
-            "PACKAGE_NAME": "com.restaurant.start"
+            "PACKAGE_NAME": "ru.topdigital.buddha"
+        },
+        "de.appplant.cordova.plugin.email-composer": {
+            "PACKAGE_NAME": "ru.topdigital.buddha"
+        },
+        "nl.x-services.plugins.socialsharing": {
+            "PACKAGE_NAME": "ru.topdigital.buddha"
+        },
+        "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "ru.topdigital.buddha"
         }
     },
     "dependent_plugins": {
         "com.google.playservices": {
-            "PACKAGE_NAME": "com.restaurant.start"
-        },
-        "com.google.admobsdk": {
-            "PACKAGE_NAME": "com.restaurant.start"
+            "PACKAGE_NAME": "ru.topdigital.buddha"
         }
     }
 }

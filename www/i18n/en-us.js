@@ -26,6 +26,7 @@ I18n.set('en-us', {
     title: 'Calendar',
     today: 'Today',
     settings: 'Settings',
+    about: 'About app',
     symbols: [
         'The Baljinima day',
         'The black days or opposite days (T)',
@@ -50,5 +51,6 @@ I18n.set('en-us', {
         'Russian',
         'English',
         'Mongolian'
-    ]
+    ],
+    language_word: 'Language'
 });

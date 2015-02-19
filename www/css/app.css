@@ -1,3 +1,10 @@
+body,
+ons-navigator,
+ons-page,
+ons-scroller {
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
 .navigation-bar {
   background: #7cb03e;
   color: #fff;
@@ -74,14 +81,14 @@
   content: ' ';
 }
 .app-page.main-page .main .date {
-  padding: 3vh 1vw;
-  font-size: 7vh;
+  padding: 5vh 1vw 2vh;
+  font-size: 6vh;
   text-align: center;
 }
 .app-page.main-page .main .date .number {
   padding: 0;
   line-height: 60px;
-  font-size: 15vh;
+  font-size: 13vh;
   font-weight: bold;
 }
 .app-page.main-page .main .icons {
@@ -124,8 +131,8 @@
   margin-left: 10px;
   width: 10vw;
   height: 10vw;
-  max-width: 12vh;
-  max-height: 12vh;
+  max-width: 40px;
+  max-height: 40px;
   background-color: #fff;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -172,13 +179,16 @@
   background-image: url(../img/icon-scissors.png);
 }
 .app-page.main-page .description {
-  height: 50%;
-  background: #f9fafb;
+  display: block;
+  height: 46.5vh;
+  overflow: scroll;
 }
 .app-page.main-page .description .description-content {
   padding: 1em;
   font-size: 14px;
   background: #f9fafb;
+  height: 65%;
+  overflow: scroll;
 }
 .app-page.info-page {
   padding: 12px 8px;
@@ -237,11 +247,14 @@
 /* Months */
 .week-days {
   position: fixed;
+  position: device-fixed;
   display: block;
   width: 100%;
   height: auto;
   text-align: center;
   z-index: 999;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 .week-days ons-col {
   color: white;
@@ -258,7 +271,8 @@
 .months-list {
   position: absolute;
   width: 100%;
-  margin-top: 0.5em;
+  margin-top: 1em;
+  border-bottom: none !important;
 }
 .months-list .month-item {
   position: relative;
@@ -301,11 +315,16 @@
   line-height: 1.4;
 }
 .months-list .day-item .icons {
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  display: -webkit-box;
+  /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
+  display: -webkit-flex;
+  /* NEW, Chrome 21–28, Safari 6.1+ */
+  display: flex;
+  /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
   margin: 0 1.5vw;
   text-align: center;
   list-style-type: none;
@@ -359,4 +378,12 @@
 .months-list ons-col:nth-child(7n-1) span,
 .months-list ons-col:nth-child(7n) span {
   color: #c90000 !important;
+}
+.scrollable {
+  overflow: auto;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.scrollable * {
+  -webkit-transform: translate3d(0, 0, 0);
 }

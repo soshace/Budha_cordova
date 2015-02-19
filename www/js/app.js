@@ -1,3 +1,65 @@
+function initAd() {
+
+    if (window.plugins && window.plugins.AdMob) {
+
+        var ad_units = {
+            ios: {
+                banner: 'ca-app-pub-7129587525075833/8641100221',
+                interstitial: 'ca-app-pub-7129587525075833/3103780626'
+            },
+            android: {
+                banner: 'ca-app-pub-7129587525075833/2734167425',
+                interstitial: 'ca-app-pub-7129587525075833/1627047428'
+            }
+        };
+
+        var admobid = "";
+
+        if (/(android)/i.test(navigator.userAgent)) {
+            admobid = ad_units.android;
+        } else if (/(iphone|ipad)/i.test(navigator.userAgent)) {
+            admobid = ad_units.ios;
+        } else {
+            admobid = ad_units.wp8;
+        }
+
+        window.plugins.AdMob.setOptions({
+            publisherId: admobid.banner,
+            interstitialAdId: admobid.interstitial,
+            bannerAtTop: false, // set to true, to put banner at top
+            overlap: true, // set to true, to allow banner overlap webview
+            offsetTopBar: true, // set to true to avoid ios7 status bar overlap
+            isTesting: false, // receiving test ad
+            autoShow: false // auto show interstitial ad when loaded
+        });
+
+    } else {
+        //alert( 'AdMob Plugin is not ready' );
+    }
+
+}
+
+function disallowScrollOver() {
+    var selScrollable = '.scrollable';
+    $(document).on('touchmove', function (e) {
+        e.preventDefault();
+    });
+    $(document).on('touchstart', selScrollable, function (e) {
+        if (e.currentTarget.scrollTop === 0) {
+            e.currentTarget.scrollTop = 1;
+        } else if (e.currentTarget.scrollHeight === e.currentTarget.scrollTop + e.currentTarget.offsetHeight) {
+            e.currentTarget.scrollTop -= 1;
+        }
+    });
+
+    $(document).on('touchmove', selScrollable, function (e) {
+        if ($(this)[0].scrollHeight > $(this).innerHeight()) {
+            e.stopPropagation();
+        }
+    });
+}
+disallowScrollOver();
+
 (function () {
     'use strict';
 
@@ -66,7 +128,7 @@
                         return a;
                     },
                     surroundDay = function (day) {
-                        return '<span class="number"> '+day+' </span>';
+                        return '<span class="number"> ' + day + ' </span>';
                     },
                     appendDay = function (index, prepend) {
                         var day = days[index];
@@ -79,7 +141,7 @@
                             html = t(carouselItemCache, {
                                 id: id,
                                 year: Ymd[0],
-                                date: (lang=='en-us')?I18n.pick('month', Ymd[1] - 1)+', '+surroundDay(Ymd[2]):surroundDay(Ymd[2]) + I18n.pick('month_extra', Ymd[1] - 1),
+                                date: (lang == 'en-us') ? I18n.pick('month', Ymd[1] - 1).toUpperCase() + ', ' + surroundDay(Ymd[2]) : surroundDay(Ymd[2]) + I18n.pick('month_extra', Ymd[1] - 1).toUpperCase(),
                                 weekday: I18n.pick('weekday', idate.getDay()),
                                 moonday: day.moon_day,
                                 description: day.description[lang.split('-')[0]]
@@ -178,24 +240,31 @@
 
                             if (dir > 0) {
                                 if (allowRight) {
+                                    itemLast++;
                                     itemCurrent++;
-                                    appendDay(++itemLast);
-                                    removeDay(itemFirst++);
-                                    allowLeft = false;
+                                    if (itemFirst >= 0) {
+                                        appendDay(itemLast);
+                                        removeDay(itemFirst);
+                                        allowLeft = false;
+                                    }
+                                    itemFirst++;
                                 }
-                                allowRight = true;
+                                allowRight = itemFirst >= 0;
                             } else {
                                 if (allowLeft) {
+                                    itemFirst--;
                                     itemCurrent--;
-                                    appendDay(--itemFirst, true);
-                                    removeDay(itemLast--);
-                                    allowRight = false;
+                                    if (itemFirst >= 0) {
+                                        appendDay(itemFirst, true);
+                                        removeDay(itemLast);
+                                        allowRight = false;
+                                    }
+                                    itemLast--;
                                 }
-                                allowLeft = true;
+                                allowLeft = itemFirst >= 0;
                             }
 
                             setImmediate(function () {
-                                console.log('action taken');
                                 app.carousel.refresh();
                                 if (dir < 0) {
                                     !allowRight && app.carousel.setActiveCarouselItemIndex(app.carousel.getActiveCarouselItemIndex() + 1, {animation: 'none'});
@@ -230,7 +299,13 @@
                     });
                 }
                 ons.ready(function () {
-                    console.log('ons is resdy');
+                    initAd();
+                    // Display a banner at startup
+                    window.plugins.AdMob.createBannerView();
+                    // Prepare the interstitial
+                    window.plugins.AdMob.createInterstitialView();
+                    // Somewhere else, show the interstital, not needed if set autoShow = true
+                    window.plugins.AdMob.showInterstitialAd();
                     //cacheAll();
                 });
 
@@ -410,8 +485,13 @@
                 }
 
                 $scope.weekdays = I18n.pick('weekday');
-                $scope.monthNames = I18n.pick('month');
+                $scope.monthNames = I18n.pick('month')
 
+                $scope.$on('lang-change', function () {
+                    app.navi.popPage({animation: 'none'});
+                    app.navi.popPage({animation: 'none'});
+
+                });
 
             }])
 
@@ -421,18 +501,22 @@
 
         .controller('settingsController', ['$scope', '$rootScope', '$sce', function ($scope, $rootScope, $sce) {
             $scope.currentLanguage = I18n.pick('language') || I18n.getLanguage();
-            //    TODO: add language to the i18n
         }])
 
         .controller('languageController', ['$scope', '$rootScope', '$sce', function ($scope, $rootScope, $sce) {
             var langs = ['ru-ru', 'en-us', 'mn-cyrl'];
-            $scope.langs = I18n.pick('languages');
+            var languages = ['Русский', 'English', 'Монгол'];
+            $scope.langs = languages;
 
             $scope.selectLanguage = function (index) {
                 I18n.setLanguage(langs[index]);
                 localStorage.setItem('lang', langs[index]);
 
-                app.navi.popPage();
+                app.navi.popPage({animation: 'none'});
+                app.navi.popPage({animation: 'none', onTransitionEnd: function() {
+                    app.carousel.setActiveCarouselItemIndex(app.carousel.getActiveCarouselItemIndex()+1, {animation: 'none'});
+                }});
+
                 $rootScope.$broadcast('lang-change');
 
             };

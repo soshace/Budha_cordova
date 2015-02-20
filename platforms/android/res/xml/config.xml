@@ -16,13 +16,14 @@
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
-    <splash density="land-ldpi" src="www/img/splash.png" />
-    <splash density="land-mdpi" src="www/img/splash.png" />
-    <splash density="land-xhdpi" src="www/img/splash.png" />
-    <splash density="port-hdpi" src="www/img/splash.png" />
-    <splash density="port-ldpi" src="www/img/splash.png" />
-    <splash density="port-mdpi" src="www/img/splash.png" />
-    <splash density="port-xhdpi" src="www/img/splash.png" />
+    <splash density="land-hdpi" src="www/img/splash_16_9.png" />
+    <splash density="land-ldpi" src="www/img/splash_16_9.png" />
+    <splash density="land-mdpi" src="www/img/splash_4_3.png" />
+    <splash density="land-xhdpi" src="www/img/splash_16_9.png" />
+    <splash density="port-hdpi" src="www/img/splash_9_16.png" />
+    <splash density="port-ldpi" src="www/img/splash_9_16.png" />
+    <splash density="port-mdpi" src="www/img/splash_3_4.png" />
+    <splash density="port-xhdpi" src="www/img/splash_9_16.png" />
     <name>Budha Calendar</name>
     <description>
         Calendar description
@@ -33,6 +34,6 @@
     <content src="index.html" />
     <icon src="www/img/icon.png" />
     <access origin="*" />
-    <splash density="land-hdpi" src="www/img/splash.png" />
+    <splash src="www/img/splash.png" />
     <plugin name="com.rjfun.cordova.plugin.admob" />
 </widget>

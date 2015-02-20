@@ -12,17 +12,20 @@
         </div>
     </ons-toolbar>
 
-    <div class="app-page main-page scrollable">
-        <div style="height: 100%;">
-            <ons-list ng-repeat="year in years" class="year-list scrollable" style="border: none;" ontouchmove="">
-                <ons-list-item class="year-item scrollable">
-                    <span style="position: absolute; top:-46px;" class="year-item-{{year}}"></span>
-                    <div class="center">{{year}}</div>
-                </ons-list-item>
-                <ons-list-item ng-repeat="month in months" modifier="tappable" class="green scrollable"
-                               ng-click="selectMonth($index, year)">
-                    <div class="month-item">{{month | uppercase}}</div>
-                </ons-list-item>
+    <div class="app-page main-page green scrollable">
+        <div style="height: 100%;" class="green">
+            <ons-list ng-repeat="year in years" class="year-list scrollable" style="border: none;">
+                <div class="inner-list green scrollable">
+                    <ons-list-item class="year-item scrollable">
+                        <span style="position: absolute; top:-46px;" class="year-item-{{year}}"></span>
+
+                        <div class="center">{{year}}</div>
+                    </ons-list-item>
+                    <ons-list-item ng-repeat="month in months" modifier="tappable" class="green scrollable"
+                                   ng-click="selectMonth($index, year)">
+                        <div class="month-item">{{month | uppercase}}</div>
+                    </ons-list-item>
+                </div>
             </ons-list>
 
         </div>

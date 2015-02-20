@@ -5,7 +5,7 @@
 
     <meta name="apple-touch-fullscreen" content="yes">
     <meta content='True' name='HandheldFriendly' />
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
     <title>Budha Calendar</title>
     <link rel="stylesheet" href="css/plugins.css"/>
@@ -14,7 +14,6 @@
 
     <link rel="stylesheet" href="css/app.css"/>
 
-    <!--<script src="http://maps.google.com/maps/api/js"></script>-->
     <script src="lib/onsen/js/angular/angular.js"></script>
     <script src="lib/onsen/js/angular/angular-resource.js"></script>
     <script src="lib/onsen/js/angular/angular-sanitize.js"></script>
@@ -54,7 +53,7 @@
         <ons-template id="carouselItem.html">
             <ons-carousel-item id="item{{id}}">
                 <div class="app-page main-page">
-                    <div class="main green">
+                    <div class="main green" style="border-bottom: 0.2em solid #609126">
                         <div class="main-top">
                             <div class="year">{{year}}</div>
                             <div class="day">

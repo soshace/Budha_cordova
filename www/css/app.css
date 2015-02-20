@@ -38,7 +38,6 @@ ons-scroller {
 }
 .app-page.main-page .green {
   background: url(../img/bg-tile.jpg) 0 0 repeat;
-  border-bottom: 0.2em solid #609126;
 }
 .app-page.main-page .main {
   height: 50%;
@@ -223,6 +222,12 @@ ons-scroller {
   background: white;
 }
 /* Years */
+.year-list .inner-list {
+  display: block;
+  width: 100%;
+  height: 75vh;
+  overflow: scroll;
+}
 .year-list ons-list-item {
   border: none !important;
 }
@@ -272,6 +277,7 @@ ons-scroller {
 .months-list {
   position: absolute;
   width: 100%;
+  height: 83%;
   margin-top: 1em;
   border-bottom: none !important;
 }
@@ -318,6 +324,7 @@ ons-scroller {
 .months-list .day-item .icons {
   flex-direction: row;
   flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   display: -webkit-box;

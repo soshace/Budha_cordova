@@ -201,17 +201,19 @@ disallowScrollOver();
 
                     setCurrentDay = function (index) {
                         console.log('setCurrentDay');
-                        var i = itemFirst = index - 2;
-                        itemLast = index + 2;
+
+                        var i = itemFirst = 0;
+                        itemLast = index + 3;
                         itemCurrent = index;
 
-                        for (; i <= itemLast; i++) {
+                        for (i = 0; i <= itemLast; i++) {
+                            console.log(i);
                             if (!appendDay(i) && i == itemFirst)
                                 itemFirst++;
                         }
 
                         app.carousel.refresh();
-                        app.carousel.setActiveCarouselItemIndex(index - itemFirst, {animation: 'none'});
+                        app.carousel.setActiveCarouselItemIndex(index - itemFirst, {animation: 'none'}, true);
 
                     },
 
@@ -224,11 +226,8 @@ disallowScrollOver();
                     },
 
                     setPostChange = function () {
-                        var allowRight = true;
-                        var allowLeft = true;
                         app.carousel.on('postchange', function (e) {
                             console.log('---------------------------------');
-                            console.log('postChange');
                             console.log('itemFirst ' + itemFirst + ' itemLast ' + itemLast);
                             console.log('itemCurrent ' + itemCurrent);
                             console.log(e.lastActiveIndex);
@@ -239,37 +238,19 @@ disallowScrollOver();
                             if (!dir) return;
 
                             if (dir > 0) {
-                                if (allowRight) {
-                                    itemLast++;
-                                    itemCurrent++;
-                                    if (itemFirst >= 0) {
-                                        appendDay(itemLast);
-                                        removeDay(itemFirst);
-                                        allowLeft = false;
-                                    }
-                                    itemFirst++;
-                                }
-                                allowRight = itemFirst >= 0;
+                                itemCurrent++;
+                                appendDay(++itemLast);
+
+
                             } else {
-                                if (allowLeft) {
-                                    itemFirst--;
-                                    itemCurrent--;
-                                    if (itemFirst >= 0) {
-                                        appendDay(itemFirst, true);
-                                        removeDay(itemLast);
-                                        allowRight = false;
-                                    }
-                                    itemLast--;
-                                }
-                                allowLeft = itemFirst >= 0;
+                                itemCurrent--;
+
                             }
 
                             setImmediate(function () {
                                 app.carousel.refresh();
-                                if (dir < 0) {
-                                    !allowRight && app.carousel.setActiveCarouselItemIndex(app.carousel.getActiveCarouselItemIndex() + 1, {animation: 'none'});
-                                } else {
-                                    !allowLeft && app.carousel.setActiveCarouselItemIndex(app.carousel.getActiveCarouselItemIndex() - 1, {animation: 'none'});
+                                if (dir > 0) {
+                                    app.carousel.setActiveCarouselItemIndex(app.carousel.getActiveCarouselItemIndex(), {animation: 'none'});
                                 }
 
                             });
@@ -288,25 +269,37 @@ disallowScrollOver();
                     });
                 }
                 else {
-                    $http.get('http://api.budha.topsdigital.ru/api/v1/year/' + year).success(function (result) {
-                        console.log('http');
-                        days = result.info;
-                        window.localStorage.setItem('year' + year, JSON.stringify(days));
-                        setCurrentDate(today);
-                        setPostChange();
-                        app.carousel.refresh();
-                        dates = days;
+                    Year.getDetailed({yearNumber:currentYear()}, function(result) {
+                        console.log(result);
+                        if (!result.code) {
+                            days = result.days;
+                            window.localStorage.setItem('year' + year, JSON.stringify(days));
+                            setCurrentDate(today);
+                            setPostChange();
+                            app.carousel.refresh();
+                            dates = days;
+                            Year.getDetailed({yearNumber:currentYear()+1}, function(result) {
+                                if (!result.code) {
+                                    days += result.days;
+                                }
+                            });
+                        }
                     });
+                    //$http.get('http://api.budha.topsdigital.ru/api/v1/year/' + year).success(function (result) {
+                    //    console.log('http');
+                    //    days = result.info;
+                    //    window.localStorage.setItem('year' + year, JSON.stringify(days));
+                    //    setCurrentDate(today);
+                    //    setPostChange();
+                    //    app.carousel.refresh();
+                    //    dates = days;
+                    //});
                 }
                 ons.ready(function () {
                     initAd();
-                    // Display a banner at startup
                     window.plugins.AdMob.createBannerView();
-                    // Prepare the interstitial
                     window.plugins.AdMob.createInterstitialView();
-                    // Somewhere else, show the interstital, not needed if set autoShow = true
                     window.plugins.AdMob.showInterstitialAd();
-                    //cacheAll();
                 });
 
                 $scope.goToMonths = function () {
@@ -327,8 +320,6 @@ disallowScrollOver();
                 };
 
                 $scope.$on('lang-change', function () {
-                    console.log('lang-change');
-
                     appScope.i18n = I18n.pick();
                     lang = I18n.getLanguage();
                     app.carousel._element.empty();
@@ -338,7 +329,6 @@ disallowScrollOver();
                 });
 
                 $scope.$on('dayclick', function (event, day) {
-                    console.log('dayclick');
                     console.log(day.date);
                     app.navi.popPage({animation: 'none'});
                     app.carousel._element.empty();
@@ -485,7 +475,7 @@ disallowScrollOver();
                 }
 
                 $scope.weekdays = I18n.pick('weekday');
-                $scope.monthNames = I18n.pick('month')
+                $scope.monthNames = I18n.pick('month');
 
                 $scope.$on('lang-change', function () {
                     app.navi.popPage({animation: 'none'});
@@ -513,9 +503,11 @@ disallowScrollOver();
                 localStorage.setItem('lang', langs[index]);
 
                 app.navi.popPage({animation: 'none'});
-                app.navi.popPage({animation: 'none', onTransitionEnd: function() {
-                    app.carousel.setActiveCarouselItemIndex(app.carousel.getActiveCarouselItemIndex()+1, {animation: 'none'});
-                }});
+                app.navi.popPage({
+                    animation: 'none', onTransitionEnd: function () {
+                        app.carousel.setActiveCarouselItemIndex(app.carousel.getActiveCarouselItemIndex() + 1, {animation: 'none'});
+                    }
+                });
 
                 $rootScope.$broadcast('lang-change');
 

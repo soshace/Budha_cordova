@@ -74,8 +74,8 @@
                     </div>
 
                     <div class="description scrollable">
-                        <div class="description-content scrollable" ontouchmove="return false;"
-                             ontouchstart="return false;">
+                        <div class="description-content scrollable" ontouchmove="event.stopPropagation()"
+                             ontouchstart="event.stopPropagation()">
                             {{description}}
                         </div>
                     </div>

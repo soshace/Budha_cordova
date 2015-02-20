@@ -21,14 +21,14 @@
     </ons-toolbar>
 
     <div class="app-page main-page scrollable">
+        <div class="week-days">
+            <div class="bg"></div>
+            <ons-row class="content-padded">
+                <ons-col ng-repeat="weekday in weekdays" ng-if="$index!=0">{{weekday}}</ons-col>
+                <ons-col ng-repeat="weekday in weekdays" ng-if="$index==$last">{{weekday}}</ons-col>
+            </ons-row>
+        </div>
         <div style="height: 100%;" class="green">
-            <div class="week-days">
-                <div class="bg"></div>
-                <ons-row class="content-padded">
-                    <ons-col ng-repeat="weekday in weekdays" ng-if="$index!=0">{{weekday}}</ons-col>
-                    <ons-col ng-repeat="weekday in weekdays" ng-if="$index==$last">{{weekday}}</ons-col>
-                </ons-row>
-            </div>
             <div class="green months-list scrollable">
                 <div class="month-item" ng-repeat="month in months" border="1">
                     <h3>

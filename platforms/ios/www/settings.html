@@ -1,0 +1,19 @@
+<ons-page ng-controller="settingsController" ontouchmove="return false;">
+    <ons-toolbar modifier="opacity">
+        <div class="left">
+            <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">{{i18n.settings}}</div>
+    </ons-toolbar>
+
+    <div class="app-page main-page">
+        <div class="green" style="height: 100%;">
+            <ons-list>
+                <ons-list-item modifier="chevron" ng-click="app.navi.pushPage('lang.html', { animation : 'slide' })">
+                    {{i18n.language_word}}
+                    <span class="list-item-note lucent">{{i18n.language}}</span>
+                </ons-list-item>
+            </ons-list>
+        </div>
+    </div>
+</ons-page>

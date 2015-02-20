@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content='True' name='HandheldFriendly' />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <title>Budha Calendar</title>
+    <link rel="stylesheet" href="css/plugins.css"/>
+    <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
+
+    <link rel="stylesheet" href="css/app.css"/>
+
+    <script src="lib/onsen/js/angular/angular.js"></script>
+    <script src="lib/onsen/js/angular/angular-resource.js"></script>
+    <script src="lib/onsen/js/angular/angular-sanitize.js"></script>
+    <script src="lib/onsen/js/angular/angular-touch.js"></script>
+    <script src="lib/onsen/js/onsenui.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="i18n/ru-ru.js"></script>
+    <script src="i18n/en-us.js"></script>
+    <script src="i18n/mn-cyrl.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/templator.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/app.js"></script>
+
+</head>
+
+<body ng-controller="appController">
+
+<ons-navigator animation="slide" var="app.navi">
+    <ons-page ng-controller="mainController">
+        <ons-toolbar modifier="opacity" ontouchmove="return false;">
+            <div class="left">
+                <ons-toolbar-button ng-click="goToMonths()">{{i18n.title}}</ons-toolbar-button>
+            </div>
+            <div class="center">{{i18n.today}}</div>
+            <div class="right">
+                <ons-toolbar-button ng-click="app.navi.pushPage('info.html')"><i class="icon icon-info"></i>
+                </ons-toolbar-button>
+                <ons-toolbar-button ng-click="app.navi.pushPage('settings.html')"><i class="icon icon-settings"></i>
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+
+        <ons-carousel id="carousel" var="app.carousel" swipeable direction="horizontal" auto-scroll
+                      style="height:100%"></ons-carousel>
+        <ons-template id="carouselItem.html">
+            <ons-carousel-item id="item{{id}}">
+                <div class="app-page main-page">
+                    <div class="main green" style="border-bottom: 0.2em solid #609126">
+                        <div class="main-top">
+                            <div class="year">{{year}}</div>
+                            <div class="day">
+                                <i class="icon icon-moon"></i>
+
+                                <div class="weekday">{{weekday}}</div>
+                                <div class="moon">{{moonday}}</div>
+                            </div>
+                        </div>
+                        <div class="date">
+
+                            {{date}}
+                        </div>
+                        <div class="icons">
+                            <ul></ul>
+                        </div>
+                    </div>
+
+                    <div class="description scrollable">
+                        <div class="description-content scrollable" ontouchmove="event.stopPropagation()"
+                             ontouchstart="event.stopPropagation()">
+                            {{description}}
+                        </div>
+                    </div>
+                </div>
+            </ons-carousel-item>
+        </ons-template>
+    </ons-page>
+</ons-navigator>
+
+<ons-template id="popover.html">
+    <ons-popover var="app.popover" animation="fade" direction="up" cancelable>
+        <p class="symbol-hint"></p>
+    </ons-popover>
+</ons-template>
+
+</body>
+</html>

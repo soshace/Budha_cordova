@@ -1,0 +1,17 @@
+<ons-page ng-controller="languageController" ontouchmove="return false;">
+    <ons-toolbar modifier="opacity">
+        <div class="left">
+            <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">Настройки</div>
+    </ons-toolbar>
+    <div class="app-page main-page">
+        <div class="green" style="height: 100%;">
+            <ons-list>
+                <ons-list-item ng-repeat="lang in langs" modifier="tappable" ng-click="selectLanguage($index)">
+                    {{lang}}
+                </ons-list-item>
+            </ons-list>
+        </div>
+    </div>
+</ons-page>

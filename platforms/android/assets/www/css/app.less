@@ -1,0 +1,450 @@
+@background-green: #7CB03E;
+
+body, ons-navigator, ons-page, ons-scroller {
+  overflow:hidden;
+  -webkit-overflow-scrolling:touch;
+}
+.navigation-bar {
+  background: #7cb03e;
+  color: #fff;
+  border: none;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.icon {
+  margin-top: 10px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background: url(../img/face-icons.png) no-repeat;
+}
+
+.icon-info {
+  background-position: 0 0;
+}
+
+.icon-settings {
+  background-position: 0 -24px;
+}
+
+.icon-moon {
+  width: 18px;
+  margin-top: 0;
+  background-position: 0 -48px;
+}
+
+/* Pages */
+
+.app-page {
+  &.main-page {
+    height: 100%;
+    background: url("../img/bg-tile.jpg") repeat scroll 0px 0px transparent;
+    .green {
+      background: url(../img/bg-tile.jpg) 0 0 repeat;
+//      border-bottom: 0.2em solid #609126;
+    }
+    .main {
+      height: 50%;
+      color: #fff;
+
+      .main-top {
+        padding: 1em 0;
+        margin: 0 1em;
+
+        .year {
+          float: left;
+          margin: 0 0 0 30%;
+          font-weight: bold;
+          text-align: center;
+          width: 40%;
+        }
+
+        .day {
+          float: right;
+          margin: 0;
+          width: 30%;
+          text-align: right;
+
+          .moon {
+            float: right;
+            display: inline-block;
+            padding: 2px 7px 0 0;
+          }
+
+          .weekday {
+            float: right;
+            display: inline-block;
+            padding: 2px;
+            background: #fff;
+            color: #7cb03e;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+        }
+      }
+      .main-top:after {
+        clear: both;
+        display: table-cell;
+        content: ' ';
+      }
+
+      .date {
+        padding: 5vh 1vw 2vh;
+        font-size: 6vh;
+        text-align: center;
+
+        .number {
+          padding: 0;
+          line-height: 60px;
+          font-size: 13vh;
+          font-weight: bold;
+        }
+      }
+
+      .icons {
+        margin: 0 auto;
+        text-align: center;
+
+
+        ul {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+
+          list-style-type: none;
+          margin: 0;
+          padding: .5vw 0;
+
+          display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
+          display: -moz-box;      /* OLD: Firefox (buggy) */
+          display: -ms-flexbox;   /* MID: IE 10 */
+          display: -webkit-flex;  /* NEW, Chrome 21–28, Safari 6.1+ */
+          display: flex;          /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
+
+          -webkit-box-align: center; -moz-box-align: center; /* OLD… */
+          -ms-flex-align: center; /* You know the drill now… */
+          -webkit-align-items: center;
+          align-items: center;
+
+          -webkit-box-pack: center; -moz-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+
+
+          li {
+            display: inline-block;
+            float: left;
+            margin-left: 10px;
+            width: 10vw;
+            height: 10vw;
+            max-width: 40px;
+            max-height: 40px;
+//            border-bottom: 0.2em solid #609126;
+            background-color: #fff;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: 80%;
+
+            &:first-child {
+              margin-left: 0;
+            }
+
+            &.baljinima {
+              background-image: url(../img/icon-baljinima.png);
+            }
+            &.black {
+              background-image: url(../img/icon-black.png);
+            }
+            &.buddha {
+              background-color: #fff2d8;
+              background-image: url(../img/icon-buddha.png);
+            }
+            &.dashinima {
+              background-image: url(../img/icon-dashinima.png);
+            }
+            &.empty {
+              background-image: url(../img/icon-empty.png);
+            }
+            &.fate {
+              background-image: url(../img/icon-fate.png);
+            }
+            &.fly {
+              background-image: url(../img/icon-fly.png);
+            }
+            &.great {
+              background-image: url(../img/icon-great.png);
+            }
+            &.jubilee {
+              background-image: url(../img/icon-jubilee.png);
+            }
+            &.lustanaga {
+              background-image: url(../img/icon-lustanaga.png);
+            }
+            &.pill {
+              background-image: url(../img/icon-pill.png);
+            }
+            &.scissors {
+              background-image: url(../img/icon-scissors.png);
+            }
+          }
+        }
+      }
+    }
+    .description {
+      display: block;
+      height: 50vh;
+      overflow: scroll;
+      background: none repeat scroll 0% 0% #F9FAFB;
+      .description-content {
+        padding: 1em;
+        font-size: 14px;
+        background: #f9fafb;
+        height: 50%;
+        overflow: scroll;
+      }
+    }
+  }
+
+  &.info-page {
+    padding: 12px 8px;
+
+    p {
+      margin: 0 0 18px;
+    }
+  }
+}
+
+.popover-mask {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.popover__content {
+  background-color: #598821;
+}
+
+.popover__bottom-arrow,
+.popover__top-arrow,
+.popover__left-arrow,
+.popover__right-arrow {
+  background-image: -webkit-linear-gradient(45deg, #598821, #598821 50%, transparent 50%);
+  background-image: -moz-linear-gradient(45deg, #598821, #598821 50%, transparent 50%);
+  background-image: -o-linear-gradient(45deg, #598821, #598821 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #598821, #598821 50%, transparent 50%);
+}
+
+.symbol-hint {
+  color: #fff;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.settings-button {
+  color: black;
+  width: 90%;
+  background: white;
+
+}
+
+/* Years */
+
+.year-list {
+  .inner-list {
+    display: block;
+    width: 100%;
+    height: 75vh;
+    overflow: scroll;
+  }
+  ons-list-item {
+    border: none !important;
+
+  }
+  .year-item {
+    position: relative;
+    border-top: 1px solid green !important;
+    border-bottom: 1px solid green !important;
+    color: white;
+    background-color: @background-green;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .month-item {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-bottom: 1px solid green !important;
+  }
+
+  ons-list-item:last-child .month-item {
+    border-bottom: none !important;
+  }
+}
+
+/* Months */
+
+.week-days {
+  position: fixed;
+  position: device-fixed;
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  z-index: 999;
+  overflow:hidden;
+  -webkit-overflow-scrolling:touch;
+
+  ons-col {
+    color: white;
+    z-index: 9999;
+  }
+  .bg {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(46, 85, 0);
+    opacity: 0.6;
+
+  }
+}
+
+.months-list {
+  position: absolute;
+  width: 100%;
+  height: 83%;
+  margin-top: 1em;
+  border-bottom: none !important;
+
+  .month-item {
+    position: relative;
+    display: block;
+    width: 100%;
+    &:nth-child(1) {
+      margin-top: 4vh !important;
+    }
+  }
+  h3 {
+    color: white;
+    margin: 1vh 2vw 0;
+  }
+
+  .day-item {
+    background-color: #FFF;
+    margin: 0.6vh 0.3vw;
+    height: 22vw;
+    .days {
+      box-sizing: border-box;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 20%;
+      margin: 1vw 0;
+
+      span {
+        position: absolute;
+        padding: 0 1.5vw;
+
+        &:first-child {
+          font-size: 4vw;
+          font-weight: bold;
+          left: 0.5vw;
+        }
+        &:last-child {
+          right: 0.5vw;
+          color: gray;
+          font-size: 3.5vw;
+          line-height: 1.4;
+        }
+      }
+    }
+    .icons {
+      flex-direction: row;
+      flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
+      display: -webkit-flex;  /* NEW, Chrome 21–28, Safari 6.1+ */
+      display: flex;          /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
+
+
+      margin: 0 1.5vw;
+      text-align: center;
+      list-style-type: none;
+
+      div {
+        display: inline-block;
+        float: left;
+        width: 3.5vw;
+        height: 3.5vw;
+        margin: 0.5vw;
+        background-repeat: no-repeat;
+        background-size: 80% auto;
+
+        &.baljinima {
+          background-image: url(../img/icon-baljinima.png);
+        }
+        &.black {
+          background-image: url(../img/icon-black.png);
+        }
+        &.buddha {
+          background-color: #fff2d8;
+          background-image: url(../img/icon-buddha.png);
+        }
+        &.dashinima {
+          background-image: url(../img/icon-dashinima.png);
+        }
+        &.empty {
+          background-image: url(../img/icon-empty.png);
+        }
+        &.fate {
+          background-image: url(../img/icon-fate.png);
+        }
+        &.fly {
+          background-image: url(../img/icon-fly.png);
+        }
+        &.great {
+          background-image: url(../img/icon-great.png);
+        }
+        &.jubilee {
+          background-image: url(../img/icon-jubilee.png);
+        }
+        &.lustanaga {
+          background-image: url(../img/icon-lustanaga.png);
+        }
+        &.pill {
+          background-image: url(../img/icon-pill.png);
+        }
+        &.scissors {
+          background-image: url(../img/icon-scissors.png);
+        }
+
+      }
+    }
+  }
+
+  ons-col:nth-child(7n-1) span,
+  ons-col:nth-child(7n) span{
+    color: #c90000 !important;
+  }
+
+}
+
+
+.scrollable {
+  overflow: auto;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.scrollable * {
+  -webkit-transform: translate3d(0,0,0);
+}

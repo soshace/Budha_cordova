@@ -1,0 +1,11 @@
+<ons-page ng-controller="infoController">
+    <ons-toolbar modifier="opacity" ontouchmove="return false;">
+        <div class="left">
+            <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">{{i18n.about}}</div>
+    </ons-toolbar>
+
+    <div class="app-page info-page scrollable" id="info" ontouchmove="event.stopPropagation()"
+         ontouchstart="event.stopPropagation()"></div>
+</ons-page>

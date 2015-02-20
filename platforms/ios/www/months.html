@@ -1,0 +1,55 @@
+<ons-page ng-controller="monthController" style="background: url('img/bg-tile.jpg')">
+    <ons-toolbar modifier="opacity" ontouchmove="return false;"
+    ">
+    <div class="left">
+        <ons-toolbar-button ng-click="app.navi.popPage({animation: 'none'});">
+            {{i18n.today}}
+        </ons-toolbar-button>
+    </div>
+    <div class="center">
+        <ons-toolbar-button
+                ng-click="app.navi.pushPage('year.html', {animation: 'none', onTransitionEnd: yearsTransitionEnd})">
+            {{currentYear}}
+        </ons-toolbar-button>
+    </div>
+    <div class="right">
+        <ons-toolbar-button ng-click="app.navi.pushPage('info.html')"><i class="icon icon-info"></i>
+        </ons-toolbar-button>
+        <ons-toolbar-button ng-click="app.navi.pushPage('settings.html')"><i class="icon icon-settings"></i>
+        </ons-toolbar-button>
+    </div>
+    </ons-toolbar>
+
+    <div class="app-page main-page scrollable">
+        <div class="week-days">
+            <div class="bg"></div>
+            <ons-row class="content-padded">
+                <ons-col ng-repeat="weekday in weekdays" ng-if="$index!=0">{{weekday}}</ons-col>
+                <ons-col ng-repeat="weekday in weekdays" ng-if="$index==$last">{{weekday}}</ons-col>
+            </ons-row>
+        </div>
+        <div style="height: 100%;" class="green">
+            <div class="green months-list scrollable">
+                <div class="month-item" ng-repeat="month in months" border="1">
+                    <h3>
+                        <span class="month-item-{{month[0][6].dateParsed.getFullYear()}}-{{month[0][6].dateParsed.getMonth()}}"
+                              style="position: absolute; top: -44px;"></span>
+                        {{monthNames[month[0][6].dateParsed.getMonth()] | uppercase}}</h3>
+                    <ons-row ng-repeat="week in month">
+                        <ons-col ng-repeat="day in week track by $index" ng-click="selectDay(day)">
+                            <div ng-show="day" class="day-item">
+                                <div class="days">
+                                    <span>{{day.dateParsed | date:'d'}}</span>
+                                    <span>{{day.moon_day}}</span>
+                                </div>
+
+                                <div ng-bind-html="day.maskElem"></div>
+                            </div>
+                        </ons-col>
+                    </ons-row>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</ons-page>

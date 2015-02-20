@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0B4F436F-2795-416C-8C69-67957F7C83B6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Budha Calendar</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AB9F0BEC028ED16D61F8AAF158C3AA206588FB6D</key>
+		<string>https://bitbucket.org/soberzerg/budha_html.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>platforms/ios/Budha Calendar.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AB9F0BEC028ED16D61F8AAF158C3AA206588FB6D</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/soberzerg/budha_html.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AB9F0BEC028ED16D61F8AAF158C3AA206588FB6D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AB9F0BEC028ED16D61F8AAF158C3AA206588FB6D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>budha_html</string>
+		</dict>
+	</array>
+</dict>
+</plist>

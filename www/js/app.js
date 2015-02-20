@@ -227,12 +227,8 @@ disallowScrollOver();
 
                     setPostChange = function () {
                         app.carousel.on('postchange', function (e) {
-                            console.log('---------------------------------');
                             console.log('itemFirst ' + itemFirst + ' itemLast ' + itemLast);
                             console.log('itemCurrent ' + itemCurrent);
-                            console.log(e.lastActiveIndex);
-                            console.log(e.activeIndex);
-
                             var dir = e.activeIndex - e.lastActiveIndex;
 
                             if (!dir) return;
@@ -269,7 +265,7 @@ disallowScrollOver();
                     });
                 }
                 else {
-                    Year.getDetailed({yearNumber:currentYear()}, function(result) {
+                    Year.getDetailed({yearNumber: currentYear()}, function (result) {
                         console.log(result);
                         if (!result.code) {
                             days = result.days;
@@ -278,22 +274,13 @@ disallowScrollOver();
                             setPostChange();
                             app.carousel.refresh();
                             dates = days;
-                            Year.getDetailed({yearNumber:currentYear()+1}, function(result) {
+                            Year.getDetailed({yearNumber: currentYear() + 1}, function (result) {
                                 if (!result.code) {
                                     days += result.days;
                                 }
                             });
                         }
                     });
-                    //$http.get('http://api.budha.topsdigital.ru/api/v1/year/' + year).success(function (result) {
-                    //    console.log('http');
-                    //    days = result.info;
-                    //    window.localStorage.setItem('year' + year, JSON.stringify(days));
-                    //    setCurrentDate(today);
-                    //    setPostChange();
-                    //    app.carousel.refresh();
-                    //    dates = days;
-                    //});
                 }
                 ons.ready(function () {
                     initAd();
@@ -430,13 +417,10 @@ disallowScrollOver();
 
                         monthItems.forEach(function (elem, index) {
                             weeks = [];
-                            //months.push([]);
                             currentWeek = 0;
                             dayCounter = 0;
                             weekCounter = (elem.length == 35) ? 5 : 6;
                             for (var week = 0; week < weekCounter; week++) {
-                                //months[index].push([]);
-                                //months[index].push(elem.slice(dayCounter, dayCounter + 7));
                                 weeks[week] = elem.slice(dayCounter, dayCounter + 7);
                                 dayCounter += 7;
                             }

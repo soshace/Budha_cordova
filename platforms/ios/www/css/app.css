@@ -185,7 +185,7 @@ ons-scroller {
 }
 .app-page.main-page .description .description-content {
   padding: 1em;
-  font-size: 14px;
+  font-size: 2.5vh;
   background: #f9fafb;
   height: 50%;
   overflow: scroll;
@@ -382,6 +382,11 @@ ons-scroller {
 }
 .months-list .day-item .icons div.scissors {
   background-image: url(../img/icon-scissors.png);
+}
+.months-list .today-item {
+  background-color: #FAE397;
+  border: 1px solid darkgreen;
+  box-sizing: border-box;
 }
 .months-list ons-col:nth-child(7n-1) span,
 .months-list ons-col:nth-child(7n) span {

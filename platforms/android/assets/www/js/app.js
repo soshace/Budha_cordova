@@ -154,11 +154,9 @@ disallowScrollOver();
                             };
 
                         if (prepend) {
-                            console.log('prepend day ' + id);
                             app.carousel._element.prepend(html);
                         }
                         else {
-                            console.log('append day ' + id);
                             app.carousel._element.append(html);
                         }
 
@@ -187,8 +185,6 @@ disallowScrollOver();
                         var id = day.date.split('-').join(''),
                             item = items[id];
 
-                        console.log('removing day ' + id);
-
                         if (!item) return;
 
                         item.popovers.forEach(function (popover) {
@@ -200,14 +196,11 @@ disallowScrollOver();
                     },
 
                     setCurrentDay = function (index) {
-                        console.log('setCurrentDay');
-
                         var i = itemFirst = 0;
                         itemLast = index + 3;
                         itemCurrent = index;
 
                         for (i = 0; i <= itemLast; i++) {
-                            console.log(i);
                             if (!appendDay(i) && i == itemFirst)
                                 itemFirst++;
                         }
@@ -227,8 +220,6 @@ disallowScrollOver();
 
                     setPostChange = function () {
                         app.carousel.on('postchange', function (e) {
-                            console.log('itemFirst ' + itemFirst + ' itemLast ' + itemLast);
-                            console.log('itemCurrent ' + itemCurrent);
                             var dir = e.activeIndex - e.lastActiveIndex;
 
                             if (!dir) return;
@@ -256,7 +247,6 @@ disallowScrollOver();
 
                 if (days) {
                     days = JSON.parse(days);
-                    console.log(days);
                     dates = days;
                     ons.ready(function () {
                         setCurrentDate(today);
@@ -266,7 +256,6 @@ disallowScrollOver();
                 }
                 else {
                     Year.getDetailed({yearNumber: currentYear()}, function (result) {
-                        console.log(result);
                         if (!result.code) {
                             days = result.days;
                             window.localStorage.setItem('year' + year, JSON.stringify(days));
@@ -316,11 +305,22 @@ disallowScrollOver();
                 });
 
                 $scope.$on('dayclick', function (event, day) {
-                    console.log(day.date);
                     app.navi.popPage({animation: 'none'});
                     app.carousel._element.empty();
                     setCurrentDate(day.date);
                     app.carousel.refresh();
+                });
+                $scope.$on('todayclick', function (event) {
+                    app.navi.popPage({animation: 'none'});
+                    //app.carousel._element.empty();
+                    //setCurrentDate(today);
+                    //app.carousel.refresh();
+                    var now = new Date();
+                    var start = new Date(currentYear(), 0, 0);
+                    var diff = now - start;
+                    var oneDay = 1000 * 60 * 60 * 24;
+                    var day = Math.floor(diff / oneDay) - 1;
+                    app.carousel.setActiveCarouselItemIndex(day);
                 });
 
             }])
@@ -435,14 +435,15 @@ disallowScrollOver();
                         $rootScope.$broadcast('dayclick', day);
                     }
                 };
+                $scope.selectToday = function () {
+                    $rootScope.$broadcast('todayclick');
+                };
 
                 $scope.yearsTransitionEnd = function () {
                     document.getElementsByClassName('year-item-' + currentYear())[0].scrollIntoView();
-                    console.log('year-item-' + currentYear());
                 };
 
                 months = JSON.parse(window.localStorage.getItem('months-' + currentYear()));
-                console.log('months-' + currentYear());
 
                 if (!months) {
                     Year.get({year: currentYear()}, function (res) {
@@ -454,12 +455,12 @@ disallowScrollOver();
                         selectMonth(month - 1, currentYear());
                     })
                 } else {
-                    months = splitWeeks(fillWeeks(splitMonths(months)));
-                    $scope.months = months;
+                    $scope.months = splitWeeks(fillWeeks(splitMonths(months)));
                 }
 
                 $scope.weekdays = I18n.pick('weekday');
                 $scope.monthNames = I18n.pick('month');
+                $scope.todayDate = new Date();
 
                 $scope.$on('lang-change', function () {
                     app.navi.popPage({animation: 'none'});
@@ -503,7 +504,6 @@ disallowScrollOver();
                 var elem = document.getElementsByClassName('month-item-' + year + '-' + month)[0];
                 elem.scrollIntoView();
                 currentYear(year);
-                console.log('month-item-' + year + '-' + month);
             }
         }])
         .factory('cache', ['$rootScope', 'currentYear', 'Year', function ($rootScope, currentYear, Year) {

@@ -2,7 +2,7 @@
     <ons-toolbar modifier="opacity" ontouchmove="return false;"
     ">
     <div class="left">
-        <ons-toolbar-button ng-click="app.navi.popPage({animation: 'none'});">
+        <ons-toolbar-button ng-click="selectToday();">
             {{i18n.today}}
         </ons-toolbar-button>
     </div>
@@ -37,7 +37,7 @@
                         {{monthNames[month[0][6].dateParsed.getMonth()] | uppercase}}</h3>
                     <ons-row ng-repeat="week in month">
                         <ons-col ng-repeat="day in week track by $index" ng-click="selectDay(day)">
-                            <div ng-show="day" class="day-item">
+                            <div ng-show="day" class="day-item" ng-class="{'today-item':day.dateParsed.setHours(0,0,0,0)==todayDate.setHours(0,0,0,0)}">
                                 <div class="days">
                                     <span>{{day.dateParsed | date:'d'}}</span>
                                     <span>{{day.moon_day}}</span>
@@ -47,7 +47,6 @@
                             </div>
                         </ons-col>
                     </ons-row>
-                    </table>
                 </div>
             </div>
         </div>

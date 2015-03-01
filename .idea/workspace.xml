@@ -1,568 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e6df318-a7e1-4701-adb3-97b0dcaaa767" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/AbstractHttpInputStream.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/AbstractOutputStream.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/rjfun/cordova/plugin/AdMob$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/rjfun/cordova/plugin/AdMob$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/rjfun/cordova/plugin/AdMob$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/rjfun/cordova/plugin/AdMob$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/rjfun/cordova/plugin/AdMob$5.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/rjfun/cordova/plugin/AdMob$6.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/rjfun/cordova/plugin/AdMob$7.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/rjfun/cordova/plugin/AdMob$BannerListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/rjfun/cordova/plugin/AdMob$BasicListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/rjfun/cordova/plugin/AdMob$InterstitialListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/rjfun/cordova/plugin/AdMob.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/Address.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/App$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/App$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/App$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/App$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/App$5.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/App.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/AuthenticationToken.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/Base64.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/BuildConfig.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/ru/topdigital/buddha/BuildConfig.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CallbackContext.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/Config.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/ConfigXmlParser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/Connection.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/ConnectionPool$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/ConnectionPool$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/ConnectionPool.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaActivity$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaActivity$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaActivity$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaActivity$4$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaActivity$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaActivity$5$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaActivity$5.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaActivity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/CordovaApp-debug-unaligned.apk" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/CordovaApp-debug.apk" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/CordovaApp.ap_" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/ru/topdigital/buddha/CordovaApp.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaArgs.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaBridge.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaChromeClient$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaChromeClient$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaChromeClient$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaChromeClient$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaChromeClient$5.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaChromeClient$6.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaChromeClient$7.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaChromeClient$8.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaChromeClient$9.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaChromeClient.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaInterface.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaPlugin.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaPreferences.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaResourceApi$OpenForReadResult.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaResourceApi.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaUriHelper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaWebView$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaWebView$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaWebView$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaWebView$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaWebView$ActivityResult.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaWebView$Level16Apis.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaWebView.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaWebViewClient$1$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaWebViewClient$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/CordovaWebViewClient.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/plugin/datepicker/DatePickerPlugin$1$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/plugin/datepicker/DatePickerPlugin$1$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/plugin/datepicker/DatePickerPlugin$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/plugin/datepicker/DatePickerPlugin$2$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/plugin/datepicker/DatePickerPlugin$2$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/plugin/datepicker/DatePickerPlugin$2$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/plugin/datepicker/DatePickerPlugin$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/plugin/datepicker/DatePickerPlugin$DateSetListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/plugin/datepicker/DatePickerPlugin$TimeSetListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/com/plugin/datepicker/DatePickerPlugin.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/splash/Default-568h@2x~iphone.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/splash/Default-667h.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/splash/Default-736h.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/splash/Default-Landscape-736h.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/splash/Default-Landscape@2x~ipad.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/splash/Default-Landscape~ipad.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/splash/Default-Portrait@2x~ipad.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/splash/Default-Portrait~ipad.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/splash/Default@2x~iphone.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/splash/Default~iphone.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/DirectoryManager.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/DiskLruCache$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/DiskLruCache$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/DiskLruCache$Editor$FaultHidingOutputStream.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/DiskLruCache$Editor.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/DiskLruCache$Entry.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/DiskLruCache$Snapshot.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/DiskLruCache.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/Dispatcher$RealResponseBody.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/Dispatcher.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/tls/DistinguishedNameParser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/Dns$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/Dns.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/DroidGap.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/de/appplant/cordova/emailcomposer/EmailComposer$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/de/appplant/cordova/emailcomposer/EmailComposer$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/de/appplant/cordova/emailcomposer/EmailComposer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/ErrorCode.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/ExifHelper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/ExposedJsApi.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/Failure$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/Failure$Builder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/Failure.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/FaultRecoveringOutputStream.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/FileHelper.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/css/font_awesome/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/css/font_awesome/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/FrameReader$Handler.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/FrameReader.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/FrameWriter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/HeaderParser$CacheControlHandler.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/HeaderParser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/HeadersMode.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/Hpack$HeaderEntry.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/Hpack$Reader.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/Hpack$Writer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/Hpack.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/Http20Draft06$Reader.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/Http20Draft06$Writer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/Http20Draft06.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/HttpAuthenticator$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/HttpAuthenticator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/HttpDate$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/HttpDate.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/HttpEngine$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/HttpEngine.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/HttpResponseCache$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/HttpResponseCache$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/HttpResponseCache$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/HttpResponseCache$CacheRequestImpl$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/HttpResponseCache$CacheRequestImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/HttpResponseCache$Entry.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/HttpResponseCache$EntryCacheResponse.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/HttpResponseCache$EntrySecureCacheResponse.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/HttpResponseCache.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/HttpTransport$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/HttpTransport$ChunkedInputStream.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/HttpTransport$ChunkedOutputStream.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/HttpTransport$FixedLengthInputStream.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/HttpTransport$FixedLengthOutputStream.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/HttpTransport.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/HttpURLConnectionImpl$Retry.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/HttpURLConnectionImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/HttpsEngine.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/HttpsURLConnectionImpl$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/HttpsURLConnectionImpl$HttpUrlConnectionDelegate.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/HttpsURLConnectionImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/IceCreamCordovaWebViewClient.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$4$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$InAppBrowserClient.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowserDialog.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppChromeClient.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/IncomingStreamHandler$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/IncomingStreamHandler.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/JSONUtils.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/Job.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/LOG.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/LinearLayoutSoftKeyboardDetect.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/MediaType.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/NameValueBlockReader$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/NameValueBlockReader$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/NameValueBlockReader$FillableInflaterInputStream.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/NameValueBlockReader.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/NamedRunnable.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/NativeToJsMessageQueue$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/NativeToJsMessageQueue$BridgeMode.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/NativeToJsMessageQueue$JsMessage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/NativeToJsMessageQueue$LoadUrlBridgeMode$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/NativeToJsMessageQueue$LoadUrlBridgeMode.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/NativeToJsMessageQueue$OnlineEventsBridgeMode$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/NativeToJsMessageQueue$OnlineEventsBridgeMode$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/NativeToJsMessageQueue$OnlineEventsBridgeMode.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/NativeToJsMessageQueue$PollingBridgeMode.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/NativeToJsMessageQueue$PrivateApiBridgeMode.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/NativeToJsMessageQueue.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/OkAuthenticator$Challenge.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/OkAuthenticator$Credential.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/OkAuthenticator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/tls/OkHostnameVerifier.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/OkHttpClient$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/OkHttpClient.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/OkResponseCache.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/OkResponseCacheAdapter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/Ping.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/Platform$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/Platform$Android23.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/Platform$Android41.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/Platform$JdkWithJettyNpnPlatform.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/Platform$JettyNpnProvider.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/Platform.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/PluginEntry.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/PluginManager.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/PluginResult$Status.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/PluginResult.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/Policy.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/ru/topdigital/buddha/R$attr.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/ru/topdigital/buddha/R$drawable.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/ru/topdigital/buddha/R$integer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/ru/topdigital/buddha/R$string.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/ru/topdigital/buddha/R$xml.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/ru/topdigital/buddha/R.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/RawHeaders$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/RawHeaders.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/Request$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/Request$Body$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/Request$Body$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/Request$Body.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/Request$Builder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/Request.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/RequestHeaders$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/RequestHeaders.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/Response$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/Response$Body.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/Response$Builder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/Response$Receiver.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/Response.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/ResponseHeaders$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/ResponseHeaders.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/ResponseSource.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/RetryableOutputStream.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/Route.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/RouteDatabase.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/RouteSelector.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/ScrollEvent.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/Settings.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/nl/xservices/plugins/SocialSharing$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/nl/xservices/plugins/SocialSharing$2$1$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/nl/xservices/plugins/SocialSharing$2$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/nl/xservices/plugins/SocialSharing$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/nl/xservices/plugins/SocialSharing$SocialSharingRunnable.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes/nl/xservices/plugins/SocialSharing.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/Spdy3$Reader.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/Spdy3$Writer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/Spdy3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/SpdyConnection$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/SpdyConnection$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/SpdyConnection$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/SpdyConnection$Builder.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/SpdyConnection$Reader$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/SpdyConnection$Reader.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/SpdyConnection.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/SpdyStream$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/SpdyStream$SpdyDataInputStream.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/SpdyStream$SpdyDataOutputStream.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/SpdyStream.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/SpdyTransport.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/StrictLineReader$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/StrictLineReader.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/Transport.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/TunnelRequest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/http/UnknownLengthHttpInputStream.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar.xcodeproj/project.xcworkspace/xcuserdata/adan.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar.xcodeproj/project.xcworkspace/xcuserdata/vlad.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/Util$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/Util.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/com/squareup/okhttp/internal/spdy/Variant.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/Whitelist$URLPattern.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes/org/apache/cordova/Whitelist.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/js/angular/angular.min.js.gzip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/js/angular/angular.min.js.gzip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/bg-tile.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/bg-tile.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/dexedLibs/classes-bec50ac977304b92177fe84fce165873.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes.dex" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/classes.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/face-icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/face-icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/css/font_awesome/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/css/font_awesome/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/css/font_awesome/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/css/font_awesome/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/css/font_awesome/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/css/font_awesome/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/dexedLibs/google-play-services-104bf2754acb49bde6ce9a219429dafe.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/libs/google-play-services.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable-hdpi/ic_action_next_item.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable-mdpi/ic_action_next_item.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable-xhdpi/ic_action_next_item.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable-xxhdpi/ic_action_next_item.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable-hdpi/ic_action_previous_item.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable-mdpi/ic_action_previous_item.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable-xhdpi/ic_action_previous_item.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable-xxhdpi/ic_action_previous_item.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable-hdpi/ic_action_remove.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable-mdpi/ic_action_remove.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable-xhdpi/ic_action_remove.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable-xxhdpi/ic_action_remove.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/icons/icon-40.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/icons/icon-40@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/icons/icon-50.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/icons/icon-50@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/icons/icon-60.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/icons/icon-60@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/icons/icon-60@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/icons/icon-72.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/icons/icon-72@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/icons/icon-76.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/icons/icon-76@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/icon-baljinima.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/icon-baljinima.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/icon-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/icon-black.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/icon-buddha.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/icon-buddha.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/icon-dashinima.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/icon-dashinima.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/icon-empty.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/icon-empty.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/icon-fate.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/icon-fate.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/icon-fly.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/icon-fly.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/icon-great.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/icon-great.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/icon-jubilee.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/icon-jubilee.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/icon-lustanaga.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/icon-lustanaga.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/icon-pill.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/icon-pill.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/icon-scissors.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/icon-scissors.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/icons/icon-small.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/icons/icon-small@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/icons/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/icons/icon@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/css/ionicons/fonts/ionicons.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/css/ionicons/fonts/ionicons.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/css/ionicons/fonts/ionicons.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/css/ionicons/fonts/ionicons.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/css/ionicons/fonts/ionicons.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/css/ionicons/fonts/ionicons.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/libGoogleAdMobAds.a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable-land-hdpi/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable-land-ldpi/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable-land-mdpi/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable-land-xhdpi/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable-port-hdpi/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable-port-ldpi/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable-port-mdpi/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/res/drawable-port-xhdpi/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/res/drawable/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/splash.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/splash.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/splash_16_9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/splash_16_9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/splash_3_4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/splash_3_4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/splash_4_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/splash_4_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/splash_9_16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/img/splash_9_16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/de.appplant.cordova.plugin.email-composer/APPEmailComposer.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/de.appplant.cordova.plugin.email-composer/APPEmailComposer.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/com/rjfun/cordova/plugin/AdMob.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/plugins/com.rjfun.cordova.plugin.admob/www/AdMob.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/com.rjfun.cordova.plugin.admob/www/AdMob.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/AndroidManifest.cordova.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/AndroidManifest.cordova.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/AndroidManifest.xml.d" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/AndroidManifest.xml.d" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Classes/AppDelegate.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Classes/AppDelegate.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Budha Calendar-Info.plist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Budha Calendar-Prefix.pch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar.xcodeproj/project.xcworkspace/xcshareddata/Budha Calendar.xccheckout" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar.xcodeproj/xcuserdata/vlad.xcuserdatad/xcschemes/Budha Calendar.xcscheme" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.rjfun.cordova.plugin.admob/CDVAdMob.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.rjfun.cordova.plugin.admob/CDVAdMob.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/org.apache.cordova.inappbrowser/CDVInAppBrowser.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/org.apache.cordova.inappbrowser/CDVInAppBrowser.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/CordovaApp-debug-unaligned.apk.d" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/CordovaApp.ap_.d" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/src/ru/topdigital/buddha/CordovaApp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/CordovaLib/CordovaLib.xcodeproj/xcuserdata/vlad.xcuserdatad/xcschemes/CordovaLib.xcscheme" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/DFPBannerView.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/DFPInterstitial.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/DFPSwipeableBannerView.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.plugin.datepicker/DatePicker.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/plugins/com.plugin.datepicker/www/android/DatePicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/com.plugin.datepicker/www/ios/DatePicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.plugin.datepicker/DatePicker.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/DatePicker.xib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADAdMobExtras.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADAdNetworkExtras.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADAdSize.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADAdSizeDelegate.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADAppEventDelegate.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADBannerView.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADBannerViewDelegate.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADCustomEventBanner.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADCustomEventBannerDelegate.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADCustomEventExtras.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADCustomEventInterstitial.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADCustomEventInterstitialDelegate.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADCustomEventRequest.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADInAppPurchase.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADInAppPurchaseDelegate.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADInterstitial.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADInterstitialDelegate.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADModules.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADRequest.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADRequestError.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADSearchBannerView.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADSearchRequest.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/com.google.admobsdk/GADSwipeableBannerViewDelegate.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/de.lproj/Localizable.strings" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/en.lproj/Localizable.strings" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/es.lproj/Localizable.strings" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Resources/se.lproj/Localizable.strings" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Classes/MainViewController.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Classes/MainViewController.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Classes/MainViewController.xib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/R.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/js/angular/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/js/angular/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar.xcodeproj/xcuserdata/adan.xcuserdatad/xcschemes/Restaurant.xcscheme" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/nl.x-services.plugins.socialsharing/SocialSharing.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/plugins/nl.x-services.plugins.socialsharing/www/SocialSharing.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/nl.x-services.plugins.socialsharing/www/SocialSharing.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/Plugins/nl.x-services.plugins.socialsharing/SocialSharing.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/js/angular/angular-animate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/js/angular/angular-animate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/js/angular/angular-csp.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/js/angular/angular-csp.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/js/angular/angular-resource.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/js/angular/angular-resource.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/js/angular/angular-sanitize.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/js/angular/angular-sanitize.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/js/angular/angular-touch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/js/angular/angular-touch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/js/angular/angular.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/js/angular/angular.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/js/angular/angular.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/js/angular/angular.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/js/angular/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/js/angular/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/css/app.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/css/app.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/js/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/css/app.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/css/app.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/js/angular/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/js/angular/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/i18n/calendar.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/i18n/calendar.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/classes.dex.d" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/cordova/console.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar.xcodeproj/project.xcworkspace/contents.xcworkspacedata" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/cordova.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/cordova.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/cordova_plugins.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/cordova_plugins.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/plugins/de.appplant.cordova.plugin.email-composer/www/email_composer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/de.appplant.cordova.plugin.email-composer/www/email_composer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/i18n/en-us.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/i18n/en-us.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/css/font_awesome/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/css/font_awesome/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/css/font_awesome/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/css/font_awesome/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/css/font_awesome/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/css/font_awesome/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/i18n.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/js/i18n.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/css/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/css/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/js/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/info.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/info.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/css/ionicons/css/ionicons.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/css/ionicons/css/ionicons.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/css/ionicons/css/ionicons.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/css/ionicons/css/ionicons.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/css/ionicons/fonts/ionicons.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/css/ionicons/fonts/ionicons.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/jarlist.cache" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lang.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lang.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar/main.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/i18n/mn-cyrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/i18n/mn-cyrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/months.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/months.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/css/onsen-css-components.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/css/onsen-css-components.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/css/onsenui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/css/onsenui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/js/onsenui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/js/onsenui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/js/onsenui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/js/onsenui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/js/onsenui_all.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/js/onsenui_all.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/js/onsenui_all.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/js/onsenui_all.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/lib/onsen/css/original-onsen-css-components.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/lib/onsen/css/original-onsen-css-components.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/css/plugins.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/css/plugins.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/plugins.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/js/plugins.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/css/plugins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/css/plugins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/proguard.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/ant-build/proguard.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar.xcodeproj/project.pbxproj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/i18n/ru-ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/i18n/ru-ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/services.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/js/services.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/settings.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/settings.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/templator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/js/templator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/res/values/version.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar.xcodeproj/xcuserdata/adan.xcuserdatad/xcschemes/xcschememanagement.plist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/Budha Calendar.xcodeproj/xcuserdata/vlad.xcuserdatad/xcschemes/xcschememanagement.plist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/CordovaLib/CordovaLib.xcodeproj/xcuserdata/vlad.xcuserdatad/xcschemes/xcschememanagement.plist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/android/assets/www/year.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/platforms/ios/www/year.html" />
+    <list default="true" id="3e6df318-a7e1-4701-adb3-97b0dcaaa767" name="Default" comment="platforms">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/CordovaApp-debug-unaligned.apk" afterPath="$PROJECT_DIR$/platforms/android/ant-build/CordovaApp-debug-unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/CordovaApp-debug.apk" afterPath="$PROJECT_DIR$/platforms/android/ant-build/CordovaApp-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/CordovaApp.ap_" afterPath="$PROJECT_DIR$/platforms/android/ant-build/CordovaApp.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/css/app.css" afterPath="$PROJECT_DIR$/platforms/android/assets/www/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/css/app.css" afterPath="$PROJECT_DIR$/platforms/ios/www/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/app.css" afterPath="$PROJECT_DIR$/www/css/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/app.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/js/app.js" afterPath="$PROJECT_DIR$/platforms/ios/www/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/css/app.less" afterPath="$PROJECT_DIR$/platforms/android/assets/www/css/app.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/css/app.less" afterPath="$PROJECT_DIR$/platforms/ios/www/css/app.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/app.less" afterPath="$PROJECT_DIR$/www/css/app.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" afterPath="$PROJECT_DIR$/platforms/android/CordovaLib/ant-build/build.prop" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" afterPath="$PROJECT_DIR$/platforms/android/ant-build/build.prop" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/cordova/console.log" afterPath="$PROJECT_DIR$/platforms/ios/cordova/console.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/months.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/months.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/ios/www/months.html" afterPath="$PROJECT_DIR$/platforms/ios/www/months.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/months.html" afterPath="$PROJECT_DIR$/www/months.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="budha_html.iws" />
@@ -589,11 +46,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <file leaf-file-name="app.less" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/css/app.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="7395" max-vertical-offset="8220">
-              <caret line="423" column="0" selection-start-line="423" selection-start-column="0" selection-end-line="423" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4494382" vertical-offset="0" max-vertical-offset="6885">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -602,64 +59,19 @@
       <file leaf-file-name="months.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/months.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-27.125" vertical-offset="84" max-vertical-offset="885">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#ons-page#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#1;n#div#3;n#ons-page#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="info.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/info.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="240">
-              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+            <state vertical-scroll-proportion="-24.375" vertical-offset="0" max-vertical-offset="885">
+              <caret line="39" column="150" selection-start-line="39" selection-start-column="150" selection-end-line="39" selection-end-column="150" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.less" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/css/app.less">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4681648" vertical-offset="0" max-vertical-offset="6825">
-              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="6375" max-vertical-offset="8220">
+              <caret line="462" column="33" selection-start-line="462" selection-start-column="33" selection-end-line="462" selection-end-column="33" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="year.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/year.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="570">
-              <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="services.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/js/services.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1095">
-              <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.875" vertical-offset="684" max-vertical-offset="1485">
-              <caret line="55" column="85" selection-start-line="55" selection-start-column="85" selection-end-line="55" selection-end-column="85" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#ons-carousel-item#0;n#ons-template#0;n#ons-page#0;n#ons-navigator#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -795,11 +207,11 @@
         <option value="$PROJECT_DIR$/www/lib/onsen/js/onsenui.js" />
         <option value="$PROJECT_DIR$/www/info.html" />
         <option value="$PROJECT_DIR$/config.xml" />
-        <option value="$PROJECT_DIR$/www/css/app.less" />
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/year.html" />
-        <option value="$PROJECT_DIR$/www/months.html" />
         <option value="$PROJECT_DIR$/www/js/app.js" />
+        <option value="$PROJECT_DIR$/www/months.html" />
+        <option value="$PROJECT_DIR$/www/css/app.less" />
       </list>
     </option>
   </component>
@@ -864,6 +276,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -934,7 +347,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
@@ -971,14 +383,10 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <method />
-    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -986,6 +394,10 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -1153,26 +565,31 @@
       <option name="project" value="LOCAL" />
       <updated>1424431067875</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="platforms">
+      <created>1424431505959</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1424431505959</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23541667" sideWeight="0.670398" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1186,6 +603,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329602" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1229,7 +647,8 @@
     <MESSAGE value="Решена проблема с пролистыванием дней (асинхронно добавляется следующий год) и скроллингом описания" />
     <MESSAGE value="Splash screens, решена проблема с фиксированными днями недель" />
     <MESSAGE value="code cleaning" />
-    <option name="LAST_COMMIT_MESSAGE" value="code cleaning" />
+    <MESSAGE value="platforms" />
+    <option name="LAST_COMMIT_MESSAGE" value="platforms" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1258,10 +677,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
           <caret line="0" column="84" selection-start-line="0" selection-start-column="84" selection-end-line="0" selection-end-column="84" />
-          <folding>
-            <element signature="n#style#0;n#ons-page#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#1;n#div#3;n#ons-page#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1276,7 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="525">
           <caret line="1" column="63" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1514,7 +929,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18726592" vertical-offset="0" max-vertical-offset="801">
           <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1523,12 +937,7 @@
         <state vertical-scroll-proportion="1.49875" vertical-offset="100786" max-vertical-offset="265815">
           <caret line="6799" column="0" selection-start-line="6799" selection-start-column="0" selection-end-line="6799" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1424354439000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424354439000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424354439000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424354439000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424354439000" expanded="true" signature="-1:-1" placeholder="..." />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1546,48 +955,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/year.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="570">
-          <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7395" max-vertical-offset="8220">
-          <caret line="423" column="0" selection-start-line="423" selection-start-column="0" selection-end-line="423" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1095">
-          <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.875" vertical-offset="684" max-vertical-offset="1485">
           <caret line="55" column="85" selection-start-line="55" selection-start-column="85" selection-end-line="55" selection-end-column="85" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#ons-carousel-item#0;n#ons-template#0;n#ons-page#0;n#ons-navigator#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/months.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-27.125" vertical-offset="84" max-vertical-offset="885">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#ons-page#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#div#0;n#div#1;n#div#3;n#ons-page#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1595,7 +966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="240">
           <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1603,14 +973,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.3636364" vertical-offset="1125" max-vertical-offset="2010">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/year.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31835207" vertical-offset="0" max-vertical-offset="801">
+          <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12727273" vertical-offset="0" max-vertical-offset="1095">
+          <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6375" max-vertical-offset="8220">
+          <caret line="462" column="33" selection-start-line="462" selection-start-column="33" selection-end-line="462" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/months.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.375" vertical-offset="0" max-vertical-offset="885">
+          <caret line="39" column="150" selection-start-line="39" selection-start-column="150" selection-end-line="39" selection-end-column="150" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/css/app.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4681648" vertical-offset="0" max-vertical-offset="6825">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.4494382" vertical-offset="0" max-vertical-offset="6885">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>

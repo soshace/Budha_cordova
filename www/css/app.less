@@ -1,9 +1,10 @@
 @background-green: #7CB03E;
 
 body, ons-navigator, ons-page, ons-scroller {
-  overflow:hidden;
-  -webkit-overflow-scrolling:touch;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
 }
+
 .navigation-bar {
   background: #7cb03e;
   color: #fff;
@@ -44,7 +45,7 @@ body, ons-navigator, ons-page, ons-scroller {
     background: url("../img/bg-tile.jpg") repeat scroll 0px 0px transparent;
     .green {
       background: url(../img/bg-tile.jpg) 0 0 repeat;
-//      border-bottom: 0.2em solid #609126;
+      //      border-bottom: 0.2em solid #609126;
     }
     .main {
       height: 50%;
@@ -108,7 +109,6 @@ body, ons-navigator, ons-page, ons-scroller {
         margin: 0 auto;
         text-align: center;
 
-
         ul {
           display: flex;
           flex-direction: row;
@@ -121,22 +121,23 @@ body, ons-navigator, ons-page, ons-scroller {
           margin: 0;
           padding: .5vw 0;
 
-          display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
-          display: -moz-box;      /* OLD: Firefox (buggy) */
-          display: -ms-flexbox;   /* MID: IE 10 */
-          display: -webkit-flex;  /* NEW, Chrome 21–28, Safari 6.1+ */
-          display: flex;          /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
+          display: -webkit-box; /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
+          display: -moz-box; /* OLD: Firefox (buggy) */
+          display: -ms-flexbox; /* MID: IE 10 */
+          display: -webkit-flex; /* NEW, Chrome 21–28, Safari 6.1+ */
+          display: flex; /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
 
-          -webkit-box-align: center; -moz-box-align: center; /* OLD… */
+          -webkit-box-align: center;
+          -moz-box-align: center; /* OLD… */
           -ms-flex-align: center; /* You know the drill now… */
           -webkit-align-items: center;
           align-items: center;
 
-          -webkit-box-pack: center; -moz-box-pack: center;
+          -webkit-box-pack: center;
+          -moz-box-pack: center;
           -ms-flex-pack: center;
           -webkit-justify-content: center;
           justify-content: center;
-
 
           li {
             display: inline-block;
@@ -146,7 +147,7 @@ body, ons-navigator, ons-page, ons-scroller {
             height: 10vw;
             max-width: 40px;
             max-height: 40px;
-//            border-bottom: 0.2em solid #609126;
+            //            border-bottom: 0.2em solid #609126;
             background-color: #fff;
             background-position: 50% 50%;
             background-repeat: no-repeat;
@@ -204,7 +205,7 @@ body, ons-navigator, ons-page, ons-scroller {
       background: none repeat scroll 0% 0% #F9FAFB;
       .description-content {
         padding: 1em;
-        font-size: 14px;
+        font-size: 2.5vh;
         background: #f9fafb;
         height: 50%;
         overflow: scroll;
@@ -298,8 +299,8 @@ body, ons-navigator, ons-page, ons-scroller {
   height: auto;
   text-align: center;
   z-index: 999;
-  overflow:hidden;
-  -webkit-overflow-scrolling:touch;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
 
   ons-col {
     color: white;
@@ -372,10 +373,9 @@ body, ons-navigator, ons-page, ons-scroller {
       align-items: center;
       justify-content: center;
 
-      display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
-      display: -webkit-flex;  /* NEW, Chrome 21–28, Safari 6.1+ */
-      display: flex;          /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
-
+      display: -webkit-box; /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
+      display: -webkit-flex; /* NEW, Chrome 21–28, Safari 6.1+ */
+      display: flex; /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
 
       margin: 0 1.5vw;
       text-align: center;
@@ -431,20 +431,24 @@ body, ons-navigator, ons-page, ons-scroller {
       }
     }
   }
-
+  .today-item {
+    background-color: #FAE397;
+    border: 1px solid darkgreen;
+    box-sizing: border-box;
+  }
   ons-col:nth-child(7n-1) span,
-  ons-col:nth-child(7n) span{
+  ons-col:nth-child(7n) span {
     color: #c90000 !important;
   }
 
 }
-
 
 .scrollable {
   overflow: auto;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
 }
+
 .scrollable * {
-  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
